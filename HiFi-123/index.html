@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiFi-123 Project Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/inter-ui@3.15.0/font/css/inter.min.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+    
+<style>
+    .result-group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin-bottom: 20px;
+    }
+    .result-group img, .result-group video {
+        flex: 1;  /* Allow each item to grow and shrink as needed */
+        max-height: 300px;  /* Define a standard height */
+        width: auto;
+        margin: 0 5px;
+    }
+</style>
+
+<style>
+    .result-group img {
+        width: 15%;
+        height: auto;
+    }
+    .result-group video {
+        width: 15%;
+        height: auto;
+    }
+    .video-wrapper {
+        position: relative;
+        padding-bottom: 100%; /* 1:1 Aspect Ratio */
+        height: 0;
+        margin: 10px 0;
+    }
+
+    .video-wrapper video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        h1, h3, h4 {
+            font-weight: 500;
+            color: #363636;
+        }
+
+        .box {
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .method-image {
+            width: 65%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            /* width: 65%;
+            height: auto;
+            width: 100%; */
+            /* max-height: 400px; */
+        }
+
+        .result-video, .input-image {
+            max-height: 200px;
+        }
+
+        .highlight {
+            border: 3px solid #00d1b2;  /* Highlight with a border */
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="section">
+    <div class="container">
+        <h1 class="title is-2">HiFi-123: Towards High-fidelity One Image to 3D Content Generation</h1>
+        <h3 class="subtitle is-4">Author: Anonymous</h3>
+        <!-- Abstract -->
+        <section class="section">
+            <h3 class="title is-3">Abstract</h3>
+            <p>
+                Recent advances in text-to-image diffusion models have enabled 3D generation from a single image. However, current image-to-3D methods often produce suboptimal results for novel views, with blurred textures and deviations from the reference image, limiting their practical applications. In this paper, we introduce \emph{HiFi-123}, a method designed for high-fidelity and multi-view consistent 3D generation. Our contributions are twofold: First, we propose a reference-based novel view enhancement technique that substantially reduces the quality gap between synthesized and reference views. Second, capitalizing on the novel view enhancement, we present a novel reference-guided state distillation loss. When incorporated into the optimization-based image-to-3D pipeline, our method significantly improves 3D generation quality, achieving state-of-the-art performance. Comprehensive evaluations demonstrate the effectiveness of our approach over existing methods, both qualitatively and quantitatively. Video comparisons are available on the supplementary project page. We will release our code to the public.
+            </p>
+        </section>
+
+        <!-- Method Overview -->
+        <section class="section">
+            <h3 class="title is-3">Method Overview</h3>
+            <figure class="image method-image">
+                <img src="./static/illustration/pipeline_2d.png" alt="Method Overview 2D">
+            </figure>
+            <figure class="image method-image">
+                <img src="./static/illustration/pipeline_3d.png" alt="Method Overview 3D">
+            </figure>
+        </section>
+
+        <section class="section">
+            <h3 class="title is-3">Image-to-3D Results</h3>
+            <h5 class="title is-5">Please click the input image (the leftmost) to play the video.</h5>
+            <!-- Placeholder for the results -->
+            <div id="resultsContainer"></div>
+        </section>
+
+
+
+<!-- <div class="box">
+    <h4>Image-to-3D Results:</h4>
+
+    
+</div> -->
+
+
+    </div>
+</section>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const videoNames = ["RealFusion", "Make-It-3D", "Magic123", "Magic123 Normal", "Ours", "Ours Normal"];
+        const examples = [
+            {
+                input: "./static/results/as.png",
+                videos: ["./static/results/realfusion/as.mp4", "./static/results/makeit3d_results/as.mp4", "./static/results/results_magic123/magic123_astronaut_coarse_fine_ep0050_lambertian.mp4", "./static/results/results_magic123/magic123_astronaut_coarse_fine_ep0050_normal.mp4", "./static/results/video_ours/as.mp4", "./static/results/normal_ours/as.mp4"]
+            },
+            {
+                input: "./static/results/bee.png",
+                videos: ["./static/results/realfusion/bee.mp4", "./static/results/makeit3d_results/bee.mp4", "./static/results/results_magic123/magic123_bea_coarse_fine_ep0050_lambertian.mp4", "./static/results/results_magic123/magic123_bea_coarse_fine_ep0050_normal.mp4", "./static/results/video_ours/bee.mp4", "./static/results/normal_ours/bee.mp4"]
+            },
+            {
+                input: "./static/results/dog.png",
+                videos: ["./static/results/realfusion/dog.mp4", "./static/results/makeit3d_results/dog.mp4", "./static/results/results_magic123/magic123_3_coarse_fine_ep0050_lambertian.mp4", "./static/results/results_magic123/magic123_3_coarse_fine_ep0050_normal.mp4", "./static/results/video_ours/dog.mp4", "./static/results/normal_ours/dog.mp4"]
+            },
+            {
+                input: "./static/results/flam.png",
+                videos: ["./static/results/realfusion/flam.mp4", "./static/results/makeit3d_results/flam.mp4", "./static/results/results_magic123/magic123_bird2_coarse_fine_ep0050_lambertian.mp4", "./static/results/results_magic123/magic123_bird2_coarse_fine_ep0050_normal.mp4", "./static/results/video_ours/flam.mp4", "./static/results/normal_ours/flam.mp4"]
+            },
+            {
+                input: "./static/results/flower.png",
+                videos: ["./static/results/realfusion/flower.mp4", "./static/results/makeit3d_results/flower.mp4", "./static/results/results_magic123/flower.mp4", "./static/results/results_magic123/flower_normal.mp4", "./static/results/video_ours/flower.mp4", "./static/results/normal_ours/flower.mp4"]
+            },
+            {
+                input: "./static/results/lion.png",
+                videos: ["./static/results/realfusion/lion.mp4", "./static/results/makeit3d_results/lion.mp4", "./static/results/results_magic123/lion.mp4", "./static/results/results_magic123/lion_normal.mp4", "./static/results/video_ours/lion.mp4", "./static/results/normal_ours/lion.mp4"]
+            },
+            {
+                input: "./static/results/lionfish.png",
+                videos: ["./static/results/realfusion/lionfish.mp4", "./static/results/makeit3d_results/lionfish.mp4", "./static/results/results_magic123/lionfish.mp4", "./static/results/results_magic123/lionfish_normal.mp4", "./static/results/video_ours/lionfish.mp4", "./static/results/normal_ours/lionfish.mp4"]
+            },
+            {
+                input: "./static/results/moto.png",
+                videos: ["./static/results/realfusion/moto.mp4", "./static/results/makeit3d_results/moto.mp4", "./static/results/results_magic123/moto.mp4", "./static/results/results_magic123/moto_normal.mp4", "./static/results/video_ours/moto.mp4", "./static/results/normal_ours/moto.mp4"]
+            },
+            {
+                input: "./static/results/skull.png",
+                videos: ["./static/results/realfusion/skull.mp4", "./static/results/makeit3d_results/skull.mp4", "./static/results/results_magic123/skull.mp4", "./static/results/results_magic123/skull_normal.mp4", "./static/results/video_ours/skull.mp4", "./static/results/normal_ours/skull.mp4"]
+            }
+            
+        ];
+        // const resultsContainer = document.querySelector(".box:last-child");
+        const resultsContainer = document.getElementById('resultsContainer');
+
+
+
+        examples.forEach(example => {
+            // Create a box for the entire result group
+            const container = document.createElement('div');
+            container.classList.add('box');
+            resultsContainer.appendChild(container);
+
+            const groupDiv = document.createElement('div');
+            groupDiv.className = "result-group";
+            // groupDiv.className = "result-group";
+            const inputImage = document.createElement('img');
+            inputImage.className = "input-image";
+            inputImage.src = example.input;
+            inputImage.addEventListener('click', function() {
+                const videos = groupDiv.querySelectorAll('video');
+                if (videos[0].paused) {
+                    videos.forEach(video => video.play());
+                } else {
+                    videos.forEach(video => video.pause());
+                }
+            });
+            groupDiv.appendChild(inputImage);
+            example.videos.forEach((videoSrc, index) => {
+                const baselineColumn = document.createElement('div');
+                baselineColumn.classList.add('column');
+
+                const baselineVideoWrapper = document.createElement('div');
+                baselineVideoWrapper.classList.add('video-container');
+
+                const videoElement = document.createElement('video');
+                videoElement.className = "result-video";
+                if (videoNames[index] === "Ours") {
+                    videoElement.classList.add("highlight");
+                }
+                videoElement.src = videoSrc;
+                videoElement.controls = true;
+
+                baselineVideoWrapper.appendChild(videoElement);
+                baselineColumn.appendChild(baselineVideoWrapper);
+                // baselineColumn.appendChild(videoElement);
+                const baselineName = document.createElement('p');
+                baselineName.classList.add('video-label');
+                baselineName.textContent = videoNames[index];
+                baselineColumn.appendChild(baselineName);
+                groupDiv.appendChild(baselineColumn);
+
+                // groupDiv.appendChild(videoElement);
+
+                // const baselineName = document.createElement('p');
+                // baselineName.classList.add('has-text-centered');
+                // baselineName.textContent = videoNames[index];
+                // groupDiv.appendChild(baselineName);
+                // <p class="video-label">Magic123</p>
+            });
+
+            // Maybe add a little space between boxes
+            const spacer = document.createElement('div');
+            spacer.style.height = '10px';
+            container.appendChild(spacer);
+
+            container.appendChild(groupDiv);
+        });
+    });
+</script>
+
+
+</body>
+</html>
+
+<style>
+    .video-container {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        padding-bottom: 100%;
+        width: 100%;  /* Approximate width for each video including the label */
+        margin: 0 0.5%;  /* Small margin for spacing */
+    }
+    .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .video-label {
+        display: block;
+        text-align: center;
+        font-size: 0.9em;
+        margin-top: 5px;
+        color: #555;
+    }
+</style>
