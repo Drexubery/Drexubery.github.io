@@ -39,6 +39,7 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
 </head>
 <body>
 
@@ -205,62 +206,50 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Comparison</h2>
-
-        <!-- <div class="content has-text-justified">
-          <p>
-            Visual comparisons of sampled facial motions animated by different methods on
-            VOCA (left) and BIWI (right) dataset. The upper partition shows the facial 
-            animation conditioned on different speech parts, while the lower depicts the 
-            temporal statistics (mean and standard deviation) of adjacent-frame motion variations within a sequence.
-          </p>
-        </div> -->
-
-        <div class="video">
-          <!--    <div class="l-page video">-->
-          <video controls="" loop="" width="100%">
-              <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
-              <source src="./static/videos/comp_as.mp4" type="video/mp4">
-          </video>
-          <video controls="" loop="" width="100%">
-              <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
-              <source src="./static/videos/comp_bee.mp4" type="video/mp4">
-          </video>
-          <video controls="" loop="" width="100%">
-              <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
-              <source src="./static/videos/comp_moto.mp4" type="video/mp4">
-          </video>
-          <video controls="" loop="" width="100%">
-              <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
-              <source src="./static/videos/comp_lionfish.mp4" type="video/mp4">
-          </video>
-          <video controls="" loop="" width="100%">
-            <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
-            <source src="./static/videos/comp_flam.mp4" type="video/mp4">
-        </video>
-        <video controls="" loop="" width="100%">
-          <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
-          <source src="./static/videos/comp_dog.mp4" type="video/mp4">
-      </video>
-      <video controls="" loop="" width="100%">
-        <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
-        <source src="./static/videos/comp_flower.mp4" type="video/mp4">
-    </video>
-  <video controls="" loop="" width="100%">
-    <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
-    <source src="./static/videos/comp_lion.mp4" type="video/mp4">
-</video>
-<video controls="" loop="" width="100%">
-  <!-- t=0.001 is a hack to make iPhone show video thumbnail -->
-  <source src="./static/videos/comp_dtu.mp4" type="video/mp4">
-</video>
+        <div class="videos">
+          <img src="static/video_insert/input1.png" alt="input1" class="img-fluid ">
+          <video src="static/video_insert/realfusion1.mp4" autoplay loop playsinline muted type="video/mp4"
+          style="width: 100%; height: auto;"></video>
+          <video src="static/video_insert/make1.mp4" autoplay loop playsinline muted playbackRate="0.4" type="video/mp4"
+          style="width: 100%; height: auto;"></video>
+          <video src="static/video_insert/magic1.mp4" autoplay loop playsinline muted playbackRate="-1" type="video/mp4"
+          style="width: 100%; height: auto;"></video>
+          <video id="myVideo" src="static/video_insert/ours1.mp4" autoplay loop playsinline muted type="video/mp4"
+          style="width: 100%; height: auto;"></video>
+          <img src="static/video_insert/input2.png" alt="input2" class="img-fluid ">
+          <video src="static/video_insert/realfusion2.mp4" autoplay loop playsinline muted type="video/mp4"
+          style="width: 100%; height: auto;"></video>
+          <video src="static/video_insert/make2.mp4" autoplay loop playsinline muted type="video/mp4"
+          style="width: 100%; height: auto;"></video>
+          <video src="static/video_insert/magic2.mp4" autoplay loop playsinline muted type="video/mp4"
+          style="width: 100%; height: auto;"></video>
+          <video src="static/video_insert/ours2.mp4" autoplay loop playsinline muted type="video/mp4"
+          style="width: 100%; height: auto;"></video>
       </div>
-
+  
       </div>
     </div>
   </div>
 </section>  
 
-
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">More results</h2>
+        <div class="videos">
+          <img src="static/video_insert/img1.png" alt="input1" class="img-fluid ">
+          <video src="static/video_insert/video1.mp4" autoplay loop playsinline muted type="video/mp4"
+          style="width: 100%; height: auto;"></video>
+          <img src="static/video_insert/img2.png" alt="input1" class="img-fluid ">
+          <video src="static/video_insert/video2.mp4" autoplay loop playsinline muted type="video/mp4"
+          style="width: 100%; height: auto;"></video>
+      </div>
+  
+      </div>
+    </div>
+  </div>
+</section>  
 <!-- <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
