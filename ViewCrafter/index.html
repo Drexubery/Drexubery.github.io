@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-55V1E709SK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-55V1E709SK');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="description"
+    content="ViewCrafter: Taming Video Diffusion Models for High-fidelity Novel View Synthesis. ">
+  <meta name="keywords" content="PVDiffusion">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ViewCrafter: Taming Video Diffusion Models for High-fidelity Novel View Synthesis
+  </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/script.js"></script>
+
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><span
+                style="color: #91e0f4 ;font-weight: bolder;">ViewCrafter</span>: Taming Video Diffusion Models for High-fidelity Novel View Synthesis</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">  
+                <a href="https://scholar.google.com/citations?user=UOE8-qsAAAAJ&hl=zh-CN">Wangbo Yu</a><sup>1</sup><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://doubiiu.github.io/">Jinbo Xing</a><sup>2</sup><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="">Li Yuan</a><sup>1</sup><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://wbhu.github.io/">Wenbo Hu</a><sup>3</sup><sup>&dagger;</sup>,</span>
+              <span class="author-block">
+                <a href="https://xiaoyu258.github.io/">Xiaoyu Li</a><sup>3</sup>,</span>
+              <span class="author-block">
+                <a href="">Zhipeng Huang</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=qgdesEcAAAAJ&hl=en/">Xiangjun Gao</a><sup>4</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.cse.cuhk.edu.hk/~ttwong/myself.html/">Tien-Tsin Wong</a><sup>5</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?hl=en&user=4oXBp9UAAAAJ&view_op=list_works&sortby=pubdate/">Ying Shan</a><sup>3</sup>,</span>
+              <span class="author-block">
+                <a href="">Yonghong Tian</a><sup>1</sup><sup>&dagger;</sup>,</span>
+          </div>
+
+          <div class="subtitle is-size-5">
+            <sup>1</sup> Peking University &nbsp;
+            <sup>2</sup> The Chinese University of Hong Kong &nbsp;
+            <sup>3</sup> Tencent AI Lab<br>
+            <sup>4</sup> Hong Kong University of Science and Technology &nbsp;
+            <sup>5</sup> Monash University &nbsp; <br>
+            <sup>*</sup> Equal Contribution
+            <sup>&dagger;</sup> Corresponding Authors
+          </div>
+
+          <!-- TODO: update paper link -->
+          <div class="column has-text-centered">
+            <!-- <div class="publication-links"> -->
+              <!-- PDF Link. -->
+              <span class="link-block">
+              <a href=""
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Drexubery/ViewCrafter"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <!-- Demo Link. -->
+              <span class="link-block">
+                <a href=""
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span>🤗 Demo</span>
+                </a>
+              </span>
+            </div>
+
+
+        </div>
+
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!--/ Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3"> <span
+            style="color: #000000 ;font-weight: bolder;">Abstract</span> </h2>
+          <div class="content has-text-justified">
+            <p>
+              Despite recent advancements in neural 3D reconstruction, the dependence on dense multi-view captures restricts their broader applicability. In this work, we propose <strong>ViewCrafter</strong>, a novel method for synthesizing high-fidelity novel views of generic scenes from single or sparse images with the prior of video diffusion model. Our method takes advantage of the powerful generation capabilities of video diffusion model and the coarse 3D clues offered by point-based representation to generate high-quality video frames with precise camera pose control. To further enlarge the generation range of novel views, we tailored an iterative view synthesis strategy together with a camera trajectory planning algorithm to progressively extend the 3D clues and the areas covered by the novel views. With ViewCrafter, we can facilitate various applications, such as immersive experiences with real-time rendering by efficiently optimizing a 3D-GS representation using the reconstructed 3D points and the generated novel views, and scene-level text-to-3D generation for more imaginative content creation. Extensive experiments on diverse datasets demonstrate the strong generalization capability and superior performance of our method in synthesizing high-fidelity and consistent novel views.
+            </p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="column is-four-fifths"></div>
+      <div class="has-text-centered">
+        <h2 class="title is-3"> <span
+          style="color: #000000 ;font-weight: bolder;">Zero-shot Novel View Synthesis Results (Single View)</span> </h2>
+        <p>Left: Camera trajectory; Right: Generated novel view video along the camera trajectory.</p> <br>
+        <div>
+          <video class="video" loop playsinline autoPlay muted src="static/videos/nvs4.mp4" ></video>
+       </div>
+       <hr> 
+          <div>
+            <video class="video" loop playsinline autoPlay muted src="static/videos/nvs1.mp4"></video>
+         </div>
+         <hr> 
+         <div>
+          <video class="video" loop playsinline autoPlay muted src="static/videos/nvs2.mp4" ></video>
+       </div>
+       <hr> 
+       <div>
+        <video class="video" loop playsinline autoPlay muted src="static/videos/nvs3.mp4" ></video>
+     </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!--/ Abstract. -->
+      <div class="column is-four-fifths"></div>
+      <div class="has-text-centered">
+        <h2 class="title is-3"> <span
+          style="color: #000000 ;font-weight: bolder;">Zero-shot Novel View Synthesis Results (2 Views)</span> </h2>
+        <!-- <p>Left: Camera trajectory; Right: Generated novel view video along the camera trajectory.</p> <br> -->
+        <br>  
+        <div>
+          <video class="video" loop playsinline autoPlay muted src="static/videos/interp1.mp4" ></video>
+       </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <br>
+  <br>
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3"> <span
+        style="color: #000000 ;font-weight: bolder;">3D Reconstruction Results (Single View)</span> </h2>
+      </div>
+      <br>
+      <section class="hero is-light is-small" style="width: 70vw; margin-left: auto; margin-right: auto;"">
+        <div class="hero-body">
+          <div class="container">
+            <div id="results-carousel" class=" carousel results-carousel">        
+              <div class="item item-family">
+                <img src="./static/images/room.png" class="top-image">
+                <video poster="" id="family" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/room.mp4"
+                          type="video/mp4">
+                </video>
+              </div>          
+              <div class="item item-barn">
+                <img src="./static/images/vac.png" class="top-image">
+                <video poster="" id="barn" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/vac.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+
+              <div class="item item-ignatius">
+                <img src="./static/images/room2.png" class="top-image">
+                <video poster="" id="ignatius" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/room2.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-ignatius">
+                <img src="./static/images/flower1.png" class="top-image"> 
+                <video poster="" id="ignatius" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/flower.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+ <br>
+ <br>
+ <br>
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3"> <span
+        style="color: #000000 ;font-weight: bolder;">Text-to-3D Generation Results</span> </h2>
+      </div>
+      <br>
+      <section class="hero is-light is-small" style="width: 70vw; margin-left: auto; margin-right: auto;"">
+        <div class="hero-body">
+          <div class="container">
+            <div id="results-carousel" class=" carousel results-carousel">        
+       
+              <div class="item item-horse">
+                <video poster="" id="horse" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/bird.mp4"
+                          type="video/mp4">
+                </video>
+                <img src="./static/images/bird.png" class="bottom-image">
+              </div>
+
+              <div class="item item-ignatius">
+                <video poster="" id="ignatius" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/fruit.mp4"
+                          type="video/mp4">
+                </video>
+                <img src="./static/images/fruit.png" class="bottom-image">
+              </div>
+              <div class="item item-ignatius">
+                <video poster="" id="ignatius" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/gen1.mp4"
+                          type="video/mp4">
+                </video>
+                <img src="./static/images/city.png" class="bottom-image">
+              </div>
+              <div class="item item-ignatius">
+                <video poster="" id="ignatius" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/wonder.mp4"
+                          type="video/mp4">
+                </video>
+                <img src="./static/images/tree.png" class="bottom-image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container is-max-desktop">
+          <!--/ Abstract. -->
+          <div class="column is-four-fifths"></div>
+          <div class="has-text-centered">
+            <h2 class="title is-3"> <span
+              style="color: #000000 ;font-weight: bolder;">Visualization of Point Cloud Render Results</span> </h2>
+            <p>The first row displays the point cloud render results, while the second row shows the
+              corresponding novel views generated by ViewCrafter. ViewCrafter can not only fill in occlusions in the point cloud but also handle incorrect geometry.</p> <br>
+            <br>  
+            <div>
+              <video class="video" loop playsinline autoPlay muted src="static/videos/point.mp4" ></video>
+           </div>
+          </div>
+        </div>
+        </div>
+      </section>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <!-- <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3"> <span
+            style="color: #000000 ;font-weight: bolder;">Abstract</span> </h2>
+          <div class="content has-text-justified">
+            <p>
+              Despite recent advancements in neural 3D reconstruction, the dependence on dense multi-view captures restricts their broader applicability. In this work, we propose <strong>ViewCrafter</strong>, a novel method for synthesizing high-fidelity novel views of generic scenes from single or sparse images with the prior of video diffusion model. Our method takes advantage of the powerful generation capabilities of video diffusion model and the coarse 3D clues offered by point-based representation to generate high-quality video frames with precise camera pose control. To further enlarge the generation range of novel views, we tailored an iterative view synthesis strategy together with a camera trajectory planning algorithm to progressively extend the 3D clues and the areas covered by the novel views. With ViewCrafter, we can facilitate various applications, such as immersive experiences with real-time rendering by efficiently optimizing a 3D-GS representation using the reconstructed 3D points and the generated novel views, and scene-level text-to-3D generation for more imaginative content creation. Extensive experiments on diverse datasets demonstrate the strong generalization capability and superior performance of our method in synthesizing high-fidelity and consistent novel views.
+            </p>
+          </div>
+        </div>
+      </div> -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3"><span
+            style="color: #000000 ;font-weight: bolder;">Method Overview</span></h2>
+          <div class="content has-text-justified">
+            <img src="./static/images/pipeline1.png">
+
+            <p>Given a single reference image or sparse image sets, we first build its point cloud representation using a dense stereo model, which enables accurately moving cameras for free-view rendering. Subsequently, to address the large missing regions, geometric distortions, and point cloud artifacts exhibited in the rendered images, we train a point-conditioned video diffusion model to serve as an enhanced renderer, facilitating the generation of high-fidelity and consistent novel views based on the coarse point cloud renders. For long-range novel view synthesis, we adopt an iterative novel view synthesis strategy to iteratively move cameras, generate novel views, and update the point cloud.</p>
+          </div>
+          <br>
+          <div class="content has-text-justified">
+            <img src="./static/images/pipeline2.png">
+            <p>To facilitate more consistent 3D-GS optimization, we leverage the iterative view synthesis strategy to progressively complete the initial point cloud and synthesize novel views using ViewCrafter. We then use the completed dense point cloud to initialize 3D-GS and employ the synthesized novel views to supervise 3D-GS training.</p>
+          </div>
+        </div>
+      </div>
+      <!--/ Concurrent Work. -->
+
+    </div>
+  </section>
+
+ 
+
+
+
+  </script>
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{
+      }</code></pre>
+    </div>
+  </section>
+  
+
+  <!-- TODO: update the arxiv link and github -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <!-- <a class="icon-link" href="">
+          <i class="fas fa-file-pdf"></i>
+        </a> -->
+        <!-- <a class="icon-link" href="" class="external-link" disabled>
+          <i class="fab fa-github"></i> -->
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This project page is inspired by <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://instantsplat.github.io/">InstantSplat</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
