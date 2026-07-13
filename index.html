@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Wangbo Yu">
+  <meta name="description" content="Wangbo Yu — Research Scientist at Tencent ARC Lab, working on 3D vision, generative modeling, and video world models.">
+  <title>Wangbo Yu</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=2">
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+  <main class="page-shell">
+    <section class="intro" aria-labelledby="name">
+      <div class="intro-copy">
+        <h1 id="name">Wangbo Yu</h1>
+        <p class="role">
+          Research Scientist<br>
+          Tencent ARC Lab
+        </p>
+
+        <p>
+          I obtained my Ph.D. from the
+          <a href="https://cs.pku.edu.cn/" target="_blank" rel="noopener noreferrer">School of Computer Science</a>
+          at
+          <a href="https://www.pku.edu.cn/" target="_blank" rel="noopener noreferrer">Peking University</a>,
+          advised by
+          <a href="https://scholar.google.com/citations?user=-5juAR0AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Prof. Li Yuan</a>
+          and
+          <a href="https://scholar.google.com/citations?user=fn6hJx0AAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">Prof. Yonghong Tian</a>.
+          Previously, I received my B.Eng. from
+          <a href="https://en.xidian.edu.cn/" target="_blank" rel="noopener noreferrer">Xidian University</a>
+          in 2021. My research spans 3D vision and generative models, with a recent focus on video world models.
+        </p>
+
+        <p class="recruiting">
+          I am actively building world model systems that support
+          <span class="no-break">real-time generation</span>, flexible interaction, and long-term memory.
+          I am looking for research interns with relevant experience&mdash;feel free to
+          <a href="mailto:yuwangbo98@gmail.com">contact me</a> if you are interested.
+        </p>
+
+        <nav class="profile-links" aria-label="Profile links">
+          <a href="mailto:yuwangbo98@gmail.com">Email</a>
+          <span aria-hidden="true">/</span>
+          <a href="https://scholar.google.com/citations?user=UOE8-qsAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <span aria-hidden="true">/</span>
+          <a href="https://github.com/Drexubery" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+      </div>
+
+      <figure class="portrait-wrap">
+        <img class="portrait" src="images/me.jpg" alt="Portrait of Wangbo Yu">
+      </figure>
+    </section>
+
+    <section class="works" aria-labelledby="works-title">
+      <h2 id="works-title" class="works-heading">
+        Research Works
+        <span class="works-toggle" aria-label="Choose which research works to display">
+          (<button class="works-toggle-button is-active" id="show-selected" type="button" aria-controls="selected-works" aria-pressed="true">show selected</button>
+          <span aria-hidden="true">/</span>
+          <button class="works-toggle-button" id="show-all" type="button" aria-controls="all-works" aria-pressed="false">show all</button>)
+        </span>
+      </h2>
+
+      <div id="selected-works" class="works-view">
+
+      <article class="work">
+        <a class="work-visual" href="ViewCrafter/index.html" aria-label="View the ViewCrafter project page">
+          <img src="images/viewcrafter/viewc.gif" alt="Animated ViewCrafter preview" loading="lazy">
+        </a>
+        <div class="work-copy">
+          <h3><a href="ViewCrafter/index.html">ViewCrafter: Taming Video Diffusion Models for High-fidelity Novel View Synthesis</a></h3>
+          <p class="authors">
+            <strong>Wangbo Yu*</strong>,
+            Jinbo Xing*,
+            Li Yuan,
+            Wenbo Hu,
+            Xiaoyu Li,
+            Zhipeng Huang,
+            Xiangjun Gao,
+            Tien-Tsin Wong,
+            Ying Shan,
+            Yonghong Tian
+          </p>
+          <p><em>IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>TPAMI</strong>)</em>, 2025</p>
+          <p class="work-links">
+            <a href="https://arxiv.org/abs/2409.02048" target="_blank" rel="noopener noreferrer">arXiv</a>
+            <span>/</span>
+            <a href="ViewCrafter/index.html">Project</a>
+            <span>/</span>
+            <a href="https://huggingface.co/spaces/Doubiiu/ViewCrafter" target="_blank" rel="noopener noreferrer">Demo</a>
+            <span>/</span>
+            <a href="https://github.com/Drexubery/ViewCrafter" target="_blank" rel="noopener noreferrer">Code</a>
+            <a class="star-badge" href="https://github.com/Drexubery/ViewCrafter" target="_blank" rel="noopener noreferrer" aria-label="ViewCrafter GitHub stars">
+              <img src="https://img.shields.io/github/stars/Drexubery/ViewCrafter?style=social&amp;cacheSeconds=3600" alt="ViewCrafter GitHub stars" loading="lazy">
+            </a>
+          </p>
+          <p>Taming large-scale video diffusion models for high-fidelity novel view synthesis.</p>
+        </div>
+      </article>
+
+      <article class="work">
+        <a class="work-visual" href="https://trajectorycrafter.github.io/" target="_blank" rel="noopener noreferrer" aria-label="View the TrajectoryCrafter project page">
+          <img src="images/TrajectoryCrafter/cover_jinbo_webpage.gif" alt="TrajectoryCrafter preview" loading="lazy">
+        </a>
+        <div class="work-copy">
+          <h3><a href="https://trajectorycrafter.github.io/" target="_blank" rel="noopener noreferrer">TrajectoryCrafter: Redirecting Camera Trajectory for Monocular Videos via Diffusion Models</a></h3>
+          <p class="authors">
+            <strong>Mark YU</strong>,
+            Wenbo Hu,
+            Jinbo Xing,
+            Ying Shan
+          </p>
+          <p><em>International Conference on Computer Vision (<strong>ICCV, Oral</strong>)</em>, 2025</p>
+          <p class="work-links">
+            <a href="https://arxiv.org/abs/2503.05638" target="_blank" rel="noopener noreferrer">arXiv</a>
+            <span>/</span>
+            <a href="https://trajectorycrafter.github.io/" target="_blank" rel="noopener noreferrer">Project</a>
+            <span>/</span>
+            <a href="https://huggingface.co/spaces/Doubiiu/TrajectoryCrafter" target="_blank" rel="noopener noreferrer">Demo</a>
+            <span>/</span>
+            <a href="https://github.com/TrajectoryCrafter/TrajectoryCrafter" target="_blank" rel="noopener noreferrer">Code</a>
+            <a class="star-badge" href="https://github.com/TrajectoryCrafter/TrajectoryCrafter" target="_blank" rel="noopener noreferrer" aria-label="TrajectoryCrafter GitHub stars">
+              <img src="https://img.shields.io/github/stars/TrajectoryCrafter/TrajectoryCrafter?style=social&amp;cacheSeconds=3600" alt="TrajectoryCrafter GitHub stars" loading="lazy">
+            </a>
+          </p>
+          <p>Generating high-fidelity novel views from casually captured monocular video, while also supporting exact pose control.</p>
+        </div>
+      </article>
+
+      <article class="work">
+        <a class="work-visual" href="https://doubiiu.github.io/projects/DynamiCrafter/" target="_blank" rel="noopener noreferrer" aria-label="View the DynamiCrafter project page">
+          <img src="images/dynamicrafter/dynamicrafter_cover.gif" alt="Animated DynamiCrafter preview" loading="lazy">
+        </a>
+        <div class="work-copy">
+          <h3><a href="https://doubiiu.github.io/projects/DynamiCrafter/" target="_blank" rel="noopener noreferrer">DynamiCrafter: Animating Open-domain Images with Video Diffusion Priors</a></h3>
+          <p class="authors">
+            Jinbo Xing,
+            Menghan Xia,
+            Yong Zhang,
+            Haoxin Chen,
+            <strong>Wangbo Yu</strong>,
+            Hanyuan Liu,
+            Gongye Liu,
+            Xintao Wang,
+            Ying Shan,
+            Tien-Tsin Wong
+          </p>
+          <p><em>European Conference on Computer Vision (<strong>ECCV, Oral</strong>)</em>, 2024</p>
+          <p class="work-links">
+            <a href="https://link.springer.com/chapter/10.1007/978-3-031-72952-2_23" target="_blank" rel="noopener noreferrer">Paper</a>
+            <span>/</span>
+            <a href="https://arxiv.org/abs/2310.12190" target="_blank" rel="noopener noreferrer">arXiv</a>
+            <span>/</span>
+            <a href="https://doubiiu.github.io/projects/DynamiCrafter/" target="_blank" rel="noopener noreferrer">Project</a>
+            <span>/</span>
+            <a href="https://huggingface.co/spaces/Doubiiu/DynamiCrafter" target="_blank" rel="noopener noreferrer">Demo</a>
+            <span>/</span>
+            <a href="https://github.com/Doubiiu/DynamiCrafter" target="_blank" rel="noopener noreferrer">Code</a>
+            <a class="star-badge" href="https://github.com/Doubiiu/DynamiCrafter" target="_blank" rel="noopener noreferrer" aria-label="DynamiCrafter GitHub stars">
+              <img src="https://img.shields.io/github/stars/Doubiiu/DynamiCrafter?style=social&amp;cacheSeconds=3600" alt="DynamiCrafter GitHub stars" loading="lazy">
+            </a>
+          </p>
+          <p>An open-domain high-quality image-to-video foundation model.</p>
+        </div>
+      </article>
+
+      <article class="work">
+        <a class="work-visual" href="HiFi-123/index.html" aria-label="View the HiFi-123 project page">
+          <video autoplay muted loop playsinline preload="metadata" poster="HiFi-123/assets/images/RGNV.png" aria-label="Animated HiFi-123 preview">
+            <source src="HiFi-123/assets/videos/iron.mp4" type="video/mp4">
+          </video>
+        </a>
+        <div class="work-copy">
+          <h3><a href="HiFi-123/index.html">HiFi-123: Towards High-fidelity One Image to 3D Content Generation</a></h3>
+          <p class="authors">
+            <strong>Wangbo Yu</strong>,
+            Li Yuan,
+            Yan-Pei Cao,
+            Xiangjun Gao,
+            Xiaoyu Li,
+            Wenbo Hu,
+            Long Quan,
+            Ying Shan,
+            Yonghong Tian
+          </p>
+          <p><em>European Conference on Computer Vision (<strong>ECCV</strong>)</em>, 2024</p>
+          <p class="work-links">
+            <a href="https://arxiv.org/abs/2310.06744" target="_blank" rel="noopener noreferrer">arXiv</a>
+            <span>/</span>
+            <a href="HiFi-123/index.html">Project</a>
+            <span>/</span>
+            <a href="https://github.com/AILab-CVC/HiFi-123" target="_blank" rel="noopener noreferrer">Code</a>
+            <a class="star-badge" href="https://github.com/AILab-CVC/HiFi-123" target="_blank" rel="noopener noreferrer" aria-label="HiFi-123 GitHub stars">
+              <img src="https://img.shields.io/github/stars/AILab-CVC/HiFi-123?style=social&amp;cacheSeconds=3600" alt="HiFi-123 GitHub stars" loading="lazy">
+            </a>
+          </p>
+          <p>High-fidelity and multi-view consistent 3D content generation from a single image.</p>
+        </div>
+      </article>
+
+      <article class="work">
+        <a class="work-visual" href="https://zhouhyocean.github.io/holotime/" target="_blank" rel="noopener noreferrer" aria-label="View the HoloTime project page">
+          <video autoplay muted loop playsinline preload="metadata" poster="images/holotime/logo.png" aria-label="Animated HoloTime preview">
+            <source src="images/holotime/teaser.mp4" type="video/mp4">
+          </video>
+        </a>
+        <div class="work-copy">
+          <h3><a href="https://zhouhyocean.github.io/holotime/" target="_blank" rel="noopener noreferrer">HoloTime: Taming Video Diffusion Models for Panoramic 4D Scene Generation</a></h3>
+          <p class="authors">
+            Haiyang Zhou*,
+            <strong>Wangbo Yu*</strong>,
+            Jiawen Guan,
+            Xinhua Cheng,
+            Yonghong Tian,
+            Li Yuan
+          </p>
+          <p><em>ACM International Conference on Multimedia (<strong>ACM MM</strong>)</em>, 2025</p>
+          <p class="work-links">
+            <a href="https://arxiv.org/abs/2504.21650" target="_blank" rel="noopener noreferrer">arXiv</a>
+            <span>/</span>
+            <a href="https://zhouhyocean.github.io/holotime/" target="_blank" rel="noopener noreferrer">Project</a>
+            <span>/</span>
+            <a href="https://www.youtube.com/watch?v=reJ7H-Pe2MQ" target="_blank" rel="noopener noreferrer">Video</a>
+            <span>/</span>
+            <a href="https://github.com/PKU-YuanGroup/HoloTime" target="_blank" rel="noopener noreferrer">Code</a>
+            <a class="star-badge" href="https://github.com/PKU-YuanGroup/HoloTime" target="_blank" rel="noopener noreferrer" aria-label="HoloTime GitHub stars">
+              <img src="https://img.shields.io/github/stars/PKU-YuanGroup/HoloTime?style=social&amp;cacheSeconds=3600" alt="HoloTime GitHub stars" loading="lazy">
+            </a>
+          </p>
+          <p>Generating panoramic videos and reconstructing immersive 360-degree 4D scenes from a single prompt or reference image.</p>
+        </div>
+      </article>
+
+      <article class="work">
+        <a class="work-visual" href="https://github.com/PKU-YuanGroup/UniWorld" target="_blank" rel="noopener noreferrer" aria-label="View the UniWorld repository">
+          <video autoplay muted loop playsinline preload="metadata" poster="images/uniworld/overview.png" aria-label="Animated UniWorld preview">
+            <source src="images/uniworld/demo.mp4" type="video/mp4">
+          </video>
+        </a>
+        <div class="work-copy">
+          <h3><a href="https://github.com/PKU-YuanGroup/UniWorld" target="_blank" rel="noopener noreferrer">UniWorld-V1: High-Resolution Semantic Encoders for Unified Visual Understanding and Generation</a></h3>
+          <p class="authors">
+            Bin Lin,
+            Zongjian Li,
+            Xinhua Cheng,
+            Yuwei Niu,
+            Yang Ye,
+            Xianyi He,
+            Shenghai Yuan,
+            <strong>Wangbo Yu</strong>,
+            Shaodong Wang,
+            Yunyang Ge,
+            Yatian Pang,
+            Li Yuan
+          </p>
+          <p><em>arXiv preprint</em>, 2025</p>
+          <p class="work-links">
+            <a href="https://arxiv.org/abs/2506.03147" target="_blank" rel="noopener noreferrer">arXiv</a>
+            <span>/</span>
+            <a href="https://github.com/PKU-YuanGroup/UniWorld" target="_blank" rel="noopener noreferrer">Code</a>
+            <a class="star-badge" href="https://github.com/PKU-YuanGroup/UniWorld" target="_blank" rel="noopener noreferrer" aria-label="UniWorld GitHub stars">
+              <img src="https://img.shields.io/github/stars/PKU-YuanGroup/UniWorld?style=social&amp;cacheSeconds=3600" alt="UniWorld GitHub stars" loading="lazy">
+            </a>
+          </p>
+          <p>A unified generative framework for image understanding, generation, manipulation, and perception using high-resolution semantic encoders.</p>
+        </div>
+      </article>
+
+      <article class="work">
+        <a class="work-visual" href="https://doi.org/10.1109/TCSVT.2025.3628119" target="_blank" rel="noopener noreferrer" aria-label="View the NOFA++ paper">
+          <video autoplay muted loop playsinline preload="metadata" aria-label="Animated NOFA++ preview">
+            <source src="images/nofa/nofa_plus_plus.mp4" type="video/mp4">
+          </video>
+        </a>
+        <div class="work-copy">
+          <h3><a href="https://doi.org/10.1109/TCSVT.2025.3628119" target="_blank" rel="noopener noreferrer">NOFA++: Tuning-free NeRF-based One-shot Facial Avatar Reconstruction</a></h3>
+          <p class="authors">
+            <strong>Wangbo Yu</strong>,
+            Chaoran Feng,
+            Li Yuan,
+            Yonghong Tian
+          </p>
+          <p><em>IEEE Transactions on Circuits and Systems for Video Technology (<strong>TCSVT</strong>)</em>, 2025</p>
+          <p class="work-links">
+            <a href="https://doi.org/10.1109/TCSVT.2025.3628119" target="_blank" rel="noopener noreferrer">Paper</a>
+          </p>
+          <p>A tuning-free framework for reconstructing high-fidelity, animatable 3D facial avatars from a single image.</p>
+        </div>
+      </article>
+
+      <article class="work">
+        <a class="work-visual" href="https://arxiv.org/abs/2307.03441" target="_blank" rel="noopener noreferrer" aria-label="View the NOFA paper">
+          <video autoplay muted loop playsinline preload="metadata" poster="images/nofa/preview.png" aria-label="Animated NOFA preview">
+            <source src="images/nofa/oneshot_3_round.mp4" type="video/mp4">
+          </video>
+        </a>
+        <div class="work-copy">
+          <h3><a href="https://arxiv.org/abs/2307.03441" target="_blank" rel="noopener noreferrer">NOFA: NeRF-based One-shot Facial Avatar Reconstruction</a></h3>
+          <p class="authors">
+            <strong>Wangbo Yu</strong>,
+            Yanbo Fan,
+            Yong Zhang,
+            Xuan Wang,
+            Fei Yin,
+            Yunpeng Bai,
+            Yan-Pei Cao,
+            Ying Shan,
+            Yang Wu,
+            Zhongqian Sun,
+            Baoyuan Wu
+          </p>
+          <p><em><strong>SIGGRAPH</strong></em>, 2023</p>
+          <p class="work-links">
+            <a href="https://doi.org/10.1145/3588432.3591555" target="_blank" rel="noopener noreferrer">Paper</a>
+            <span>/</span>
+            <a href="https://arxiv.org/abs/2307.03441" target="_blank" rel="noopener noreferrer">arXiv</a>
+          </p>
+          <p>A one-shot framework that reconstructs a high-fidelity, animatable 3D facial avatar from a single source image.</p>
+        </div>
+      </article>
+
+      <article class="work">
+        <a class="work-visual" href="https://ieeexplore.ieee.org/abstract/document/9994758/" target="_blank" rel="noopener noreferrer" aria-label="View the GL-Transformer paper">
+          <img class="gl-preview" src="images/gl_transformer/preview.jpg" alt="Face photo-sketch synthesis results from GL-Transformer" loading="lazy">
+        </a>
+        <div class="work-copy">
+          <h3><a href="https://ieeexplore.ieee.org/abstract/document/9994758/" target="_blank" rel="noopener noreferrer">An Efficient Transformer Based on Global and Local Self-Attention for Face Photo-Sketch Synthesis</a></h3>
+          <p class="authors">
+            <strong>Wangbo Yu</strong>,
+            Mingrui Zhu,
+            Nannan Wang,
+            Xiaoyu Wang,
+            Xinbo Gao
+          </p>
+          <p><em>IEEE Transactions on Image Processing (<strong>TIP</strong>)</em>, 2023</p>
+          <p class="work-links">
+            <a href="https://ieeexplore.ieee.org/abstract/document/9994758/" target="_blank" rel="noopener noreferrer">Paper</a>
+          </p>
+          <p>An efficient GL-Transformer that combines global and local self-attention for structured and realistic face photo-sketch synthesis.</p>
+        </div>
+      </article>
+      </div>
+
+      <div id="all-works" class="works-view all-works" hidden>
+        <section class="publication-year" aria-labelledby="year-2026">
+          <h3 id="year-2026">2026</h3>
+          <div class="publication-list">
+            <article class="publication-item">
+              <h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;pagesize=100&amp;sortby=pubdate&amp;citation_for_view=UOE8-qsAAAAJ:OU6Ihb5iCvQC" target="_blank" rel="noopener noreferrer">Breaking the Vicious Cycle: Coherent 3D Gaussian Splatting from Sparse and Motion-Blurred Views</a></h4>
+              <p>C. Feng, Z. Xu, Y. Li, J. Zhao, J. Yang, <strong>W. Yu</strong>, L. Yuan, Y. Tian</p>
+              <p class="publication-venue">IEEE Transactions on Circuits and Systems for Video Technology, 2026</p>
+            </article>
+            <article class="publication-item">
+              <h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;pagesize=100&amp;sortby=pubdate&amp;citation_for_view=UOE8-qsAAAAJ:KxtntwgDAa4C" target="_blank" rel="noopener noreferrer">DeblurNVS: Geometric Latent Diffusion for Novel View Synthesis from Sparse Motion-Blurred Images</a></h4>
+              <p>C. Shi, <strong>W. Yu</strong>, C. Feng, L. Yuan</p>
+              <p class="publication-venue">arXiv preprint arXiv:2606.01315, 2026</p>
+            </article>
+            <article class="publication-item">
+              <h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;pagesize=100&amp;sortby=pubdate&amp;citation_for_view=UOE8-qsAAAAJ:GnPB-g6toBAC" target="_blank" rel="noopener noreferrer">Style-GRPO: Semantic-Aware Preference Optimization for Image Style Transfer Guided by Reward Modeling</a></h4>
+              <p>J. Zhao, C. Feng, M. Yu, Y. Li, Z. Tang, <strong>W. Yu</strong>, Y. Zhao, X. Li, L. Yuan, Y. Tian</p>
+              <p class="publication-venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2026</p>
+            </article>
+            <article class="publication-item">
+              <h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;pagesize=100&amp;sortby=pubdate&amp;citation_for_view=UOE8-qsAAAAJ:hMod-77fHWUC" target="_blank" rel="noopener noreferrer">360Explorer: Exploring 4D Controllable World in Panoramic Videos</a></h4>
+              <p>X. Cheng, H. Zhou, <strong>W. Yu</strong>, T. Jia, B. Lin, Y. Ge, W. Li, L. Yuan</p>
+              <p class="publication-venue">AAAI Conference on Artificial Intelligence (AAAI), 2026</p>
+            </article>
+            <article class="publication-item">
+              <h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;pagesize=100&amp;sortby=pubdate&amp;citation_for_view=UOE8-qsAAAAJ:e5wmG9Sq2KIC" target="_blank" rel="noopener noreferrer">EA3D: Event-Augmented 3D Diffusion for Generalizable Novel View Synthesis</a></h4>
+              <p><strong>W. Yu</strong>, C. Feng, J. Li, A. Zhang, Z. Tang, M. Guo, W. Zhang, Z. Ma, L. Yuan, et al.</p>
+              <p class="publication-venue">International Conference on Learning Representations (ICLR), 2026</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="publication-year" aria-labelledby="year-2025">
+          <h3 id="year-2025">2025</h3>
+          <div class="publication-list">
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:Zph67rFs4hoC" target="_blank" rel="noopener noreferrer">NOFA++: Tuning-free NeRF-based One-shot Facial Avatar Reconstruction</a></h4><p><strong>W. Yu</strong>, C. Feng, L. Yuan, Y. Tian</p><p class="publication-venue">IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2025</p></article>
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:MXK_kJrjxJIC" target="_blank" rel="noopener noreferrer">UniWorld-V2: Reinforce Image Editing with Diffusion Negative-Aware Finetuning and MLLM Implicit Feedback</a></h4><p>Z. Li, Z. Liu, Q. Zhang, B. Lin, F. Wu, S. Yuan, Z. Yan, Y. Ye, <strong>W. Yu</strong>, et al.</p><p class="publication-venue">arXiv preprint arXiv:2510.16888, 2025</p></article>
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:5nxA0vEk-isC" target="_blank" rel="noopener noreferrer">E-4DGS: High-Fidelity Dynamic Reconstruction from the Multi-view Event Cameras</a></h4><p>C. Feng*, Z. Tang*, <strong>W. Yu*</strong>, Y. Pang, Y. Zhao, J. Zhao, L. Yuan, Y. Tian</p><p class="publication-venue">ACM International Conference on Multimedia (ACM MM), 2025</p></article>
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:0EnyYjriUFMC" target="_blank" rel="noopener noreferrer">UniWorld-V1: High-Resolution Semantic Encoders for Unified Visual Understanding and Generation</a></h4><p>B. Lin, Z. Li, X. Cheng, Y. Niu, Y. Ye, X. He, S. Yuan, <strong>W. Yu</strong>, et al.</p><p class="publication-venue">arXiv preprint arXiv:2506.03147, 2025</p></article>
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:hqOjcs7Dif8C" target="_blank" rel="noopener noreferrer">GS2E: Gaussian Splatting Is an Effective Data Generator for Event Stream Generation</a></h4><p>Y. Li, C. Feng, Z. Tang, K. Deng, <strong>W. Yu</strong>, Y. Tian, L. Yuan</p><p class="publication-venue">Advances in Neural Information Processing Systems (NeurIPS), 2025</p></article>
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:UebtZRa9Y70C" target="_blank" rel="noopener noreferrer">HoloTime: Taming Video Diffusion Models for Panoramic 4D Scene Generation</a></h4><p>H. Zhou*, <strong>W. Yu*</strong>, J. Guan, X. Cheng, Y. Tian, L. Yuan</p><p class="publication-venue">ACM International Conference on Multimedia (ACM MM), 2025</p></article>
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:roLk4NBRz8UC" target="_blank" rel="noopener noreferrer">NeuralGS: Bridging Neural Fields and 3D Gaussian Splatting for Compact 3D Representations</a></h4><p>Z. Tang, C. Feng, X. Cheng, <strong>W. Yu</strong>, J. Zhang, Y. Liu, X. Long, W. Wang, L. Yuan</p><p class="publication-venue">AAAI Conference on Artificial Intelligence (AAAI), 2025</p></article>
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:LkGwnXOMwfcC" target="_blank" rel="noopener noreferrer">Video SimpleQA: Towards Factuality Evaluation in Large Video Language Models</a></h4><p>M. Cao, P. Hu, Y. Wang, J. Gu, H. Tang, H. Zhao, C. Wang, J. Dong, <strong>W. Yu</strong>, et al.</p><p class="publication-venue">AAAI Conference on Artificial Intelligence (AAAI), 2025</p></article>
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:_FxGoFyzp5QC" target="_blank" rel="noopener noreferrer">AE-NeRF: Augmenting Event-Based Neural Radiance Fields for Non-ideal Conditions and Larger Scene</a></h4><p>C. Feng, <strong>W. Yu</strong>, X. Cheng, Z. Tang, J. Zhang, L. Yuan, Y. Tian</p><p class="publication-venue">AAAI Conference on Artificial Intelligence (AAAI), 2025</p></article>
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:VOx2b1Wkg3QC" target="_blank" rel="noopener noreferrer">TrajectoryCrafter: Redirecting Camera Trajectory for Monocular Videos via Diffusion Models</a></h4><p>M. Yu, W. Hu, J. Xing, Y. Shan</p><p class="publication-venue">IEEE International Conference on Computer Vision (ICCV), Oral, 2025</p></article>
+          </div>
+        </section>
+
+        <section class="publication-year" aria-labelledby="year-2024">
+          <h3 id="year-2024">2024</h3>
+          <div class="publication-list">
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:ufrVoPGSRksC" target="_blank" rel="noopener noreferrer">RoomPainter: View-Integrated Diffusion for Consistent Indoor Scene Texturing</a></h4><p>Z. Huang, <strong>W. Yu</strong>, X. Cheng, C.-S. Zhao, Y. Ge, M. Guo, L. Yuan, Y. Tian</p><p class="publication-venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2024</p></article>
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:Y0pCki6q_DkC" target="_blank" rel="noopener noreferrer">ViewCrafter: Taming Video Diffusion Models for High-Fidelity Novel View Synthesis</a></h4><p><strong>W. Yu</strong>, J. Xing, L. Yuan, W. Hu, X. Li, Z. Huang, X. Gao, T.-T. Wong, Y. Shan, et al.</p><p class="publication-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2024</p></article>
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:Tyk-4Ss8FVUC" target="_blank" rel="noopener noreferrer">Cycle3D: High-Quality and Consistent Image-to-3D Generation via Generation-Reconstruction Cycle</a></h4><p>Z. Tang, J. Zhang, X. Cheng, <strong>W. Yu</strong>, C. Feng, Y. Pang, B. Lin, L. Yuan</p><p class="publication-venue">AAAI Conference on Artificial Intelligence (AAAI), 2024</p></article>
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:zYLM7Y9cAGgC" target="_blank" rel="noopener noreferrer">HoloDreamer: Holistic 3D Panoramic World Generation from Text Descriptions</a></h4><p>H. Zhou, X. Cheng, <strong>W. Yu</strong>, Y. Tian, L. Yuan</p><p class="publication-venue">IEEE Transactions on Visualization and Computer Graphics (TVCG), 2024</p></article>
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:W7OEmFMy1HYC" target="_blank" rel="noopener noreferrer">Multi-Scale Image Stitching Based on Unsupervised Controllable Fusion Structure</a></h4><p>Y. Li, <strong>W. Yu</strong>, Y. Zhu, G. Luo</p><p class="publication-venue">IEEE International Joint Conference on Neural Networks (IJCNN), 2024</p></article>
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:d1gkVwhDpl0C" target="_blank" rel="noopener noreferrer">EvaGaussians: Event Stream Assisted Gaussian Splatting from Blurry Images</a></h4><p><strong>W. Yu</strong>, C. Feng, J. Tang, J. Yang, Z. Tang, X. Jia, Y. Yang, L. Yuan, Y. Tian</p><p class="publication-venue">IEEE International Conference on Computer Vision (ICCV), 2024</p></article>
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:YsMSGLbcyi4C" target="_blank" rel="noopener noreferrer">AdaIFL: Adaptive Image Forgery Localization via a Dynamic and Importance-Aware Transformer Network</a></h4><p>Y. Li, F. Cheng, <strong>W. Yu</strong>, G. Wang, G. Luo, Y. Zhu</p><p class="publication-venue">European Conference on Computer Vision (ECCV), 2024</p></article>
+          </div>
+        </section>
+
+        <section class="publication-year" aria-labelledby="year-2023">
+          <h3 id="year-2023">2023</h3>
+          <div class="publication-list">
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:UeHWp8X0CEIC" target="_blank" rel="noopener noreferrer">DynamiCrafter: Animating Open-Domain Images with Video Diffusion Priors</a></h4><p>J. Xing, M. Xia, Y. Zhang, H. Chen, <strong>W. Yu</strong>, X. Wang, T.-T. Wong, Y. Shan</p><p class="publication-venue">European Conference on Computer Vision (ECCV), Oral, 2023</p></article>
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener noreferrer">HiFi-123: Towards High-Fidelity One Image to 3D Content Generation</a></h4><p><strong>W. Yu</strong>, L. Yuan, Y.-P. Cao, X. Gao, X. Li, L. Quan, Y. Shan, Y. Tian</p><p class="publication-venue">European Conference on Computer Vision (ECCV), 2023</p></article>
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:2osOgNQ5qMEC" target="_blank" rel="noopener noreferrer">NOFA: NeRF-Based One-Shot Facial Avatar Reconstruction</a></h4><p><strong>W. Yu</strong>, Y. Fan, Y. Zhang, X. Wang, F. Yin, Y. Bai, Y.-P. Cao, Y. Shan, Y. Wu, et al.</p><p class="publication-venue">ACM SIGGRAPH, 2023</p></article>
+          </div>
+        </section>
+
+        <section class="publication-year" aria-labelledby="year-2022">
+          <h3 id="year-2022">2022</h3>
+          <div class="publication-list">
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:u-x6o8ySG0sC" target="_blank" rel="noopener noreferrer">An Efficient Transformer Based on Global and Local Self-Attention for Face Photo-Sketch Synthesis</a></h4><p><strong>W. Yu</strong>, M. Zhu, N. Wang, X. Wang, X. Gao</p><p class="publication-venue">IEEE Transactions on Image Processing (TIP), 2022</p></article>
+            <article class="publication-item"><h4><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UOE8-qsAAAAJ&amp;citation_for_view=UOE8-qsAAAAJ:qjMakFHDy7sC" target="_blank" rel="noopener noreferrer">Interactive Image Inpainting Using Semantic Guidance</a></h4><p><strong>W. Yu</strong>, J. Du, R. Liu, Y. Li, Y. Zhu</p><p class="publication-venue">IEEE International Conference on Pattern Recognition (ICPR), 2022</p></article>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="detail-section" aria-labelledby="awards-title">
+      <h2 id="awards-title">Awards</h2>
+      <ul>
+        <li>Excellent Graduate of Peking University, 2026</li>
+        <li>Excellent Graduate of Shaanxi Province, 2021</li>
+        <li>National Scholarship of China, 2020</li>
+        <li>National Scholarship of China, 2019</li>
+      </ul>
+    </section>
+
+    <section class="detail-section" aria-labelledby="workshop-title">
+      <h2 id="workshop-title">Workshop</h2>
+      <ul>
+        <li>Area Chair: <a href="https://higen-2025.github.io/" target="_blank" rel="noopener noreferrer">2nd HiGen @CVPR 2026</a>.</li>
+        <li>Area Chair: <a href="https://higen-2025.github.io/" target="_blank" rel="noopener noreferrer">1st HiGen @ICCV 2025</a>.</li>
+      </ul>
+    </section>
+
+    <section class="academic-services" aria-labelledby="services-title">
+      <h2 id="services-title">Academic Services</h2>
+      <ul>
+        <li>
+          <strong>Journal Review:</strong>
+          <span>IEEE Transactions on Visualization and Computer Graphics (TVCG)</span>
+          <span>International Journal of Computer Vision (IJCV)</span>
+          <span>IEEE Transactions on Multimedia (TMM)</span>
+          <span>IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)</span>
+        </li>
+        <li>
+          <strong>Conference Review:</strong>
+          <span>SIGGRAPH, CVPR, ICCV, ECCV, ICLR, NeurIPS, ACM MM</span>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="site-footer">
+      <p>Last updated: July 2026</p>
+      <p>Web page design credit to <a href="https://jonbarron.info/" target="_blank" rel="noopener noreferrer">Jon Barron</a></p>
+    </footer>
+  </main>
+  <script>
+    (() => {
+      const selectedButton = document.getElementById("show-selected");
+      const allButton = document.getElementById("show-all");
+      const selectedWorks = document.getElementById("selected-works");
+      const allWorks = document.getElementById("all-works");
+
+      function showWorks(view) {
+        const showSelected = view === "selected";
+        selectedWorks.hidden = !showSelected;
+        allWorks.hidden = showSelected;
+        selectedButton.classList.toggle("is-active", showSelected);
+        allButton.classList.toggle("is-active", !showSelected);
+        selectedButton.setAttribute("aria-pressed", String(showSelected));
+        allButton.setAttribute("aria-pressed", String(!showSelected));
+
+        selectedWorks.querySelectorAll("video").forEach((video) => {
+          if (showSelected) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      }
+
+      selectedButton.addEventListener("click", () => showWorks("selected"));
+      allButton.addEventListener("click", () => showWorks("all"));
+    })();
+  </script>
+</body>
+</html>
