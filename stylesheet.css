@@ -99,10 +99,12 @@ h1 {
 }
 
 .role {
-  margin: 0 0 1em;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 1em;
   font-size: 18.7px;
   line-height: normal;
-  text-align: center;
+  text-align: left;
 }
 
 .intro-copy > p:not(.role) {
