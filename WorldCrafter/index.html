@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9f9fb">
+  <meta name="description" content="WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory">
+  <title>WorldCrafter: Consistent Video World Model with Implicit 3D-aware Memory</title>
+  <link rel="preload" href="assets/fonts/roobert-regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/fonts/gilda-display.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+  <script src="gallery-data.js" defer></script>
+  <script src="gallery.js" defer></script>
+</head>
+<body>
+  <main id="top">
+    <header class="project-header" aria-labelledby="project-title">
+      <h1 id="project-title"><strong>WorldCrafter</strong>:<br>Consistent Video World Model with Implicit 3D-aware Memory</h1>
+      <div class="project-authors" aria-label="Authors">
+        <div class="author-row">
+          <span><a href="https://drexubery.github.io/" target="_blank" rel="noopener noreferrer">Wangbo Yu</a><sup>1*</sup></span>
+          <span><a href="https://kunhao-liu.github.io/" target="_blank" rel="noopener noreferrer">Kunhao Liu</a><sup>1*</sup></span>
+          <span><a href="https://wbhu.github.io/" target="_blank" rel="noopener noreferrer">Wenbo Hu</a><sup>1†</sup></span>
+          <span><a href="https://shyuanbest.github.io/" target="_blank" rel="noopener noreferrer">Shenghai Yuan</a><sup>2</sup></span>
+          <span><a href="https://www.falcary.com/" target="_blank" rel="noopener noreferrer">Chaoran Feng</a><sup>2</sup></span>
+          <span><a href="https://github.com/zhouhyOcean" target="_blank" rel="noopener noreferrer">Haiyang Zhou</a><sup>2</sup></span>
+        </div>
+        <div class="author-row">
+          <span><a href="https://yukun-huang.github.io/" target="_blank" rel="noopener noreferrer">Yukun Huang</a><sup>1</sup></span>
+          <span><a href="https://raymondwang987.github.io/" target="_blank" rel="noopener noreferrer">Yiran Wang</a><sup>1</sup></span>
+          <span><a href="https://thuzhaowang.github.io/" target="_blank" rel="noopener noreferrer">Wang Zhao</a><sup>1</sup></span>
+          <span><a href="https://huggingface.co/luoyingmin" target="_blank" rel="noopener noreferrer">Yingmin Luo</a><sup>1</sup></span>
+          <span><a href="https://scholar.google.com/citations?user=4oXBp9UAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Ying Shan</a><sup>1</sup></span>
+        </div>
+      </div>
+      <div class="project-affiliations" aria-label="Affiliations">
+        <span><sup>1</sup><a href="#" data-placeholder-link>ARC Lab, Tencent IEG</a></span>
+        <span><sup>2</sup><a href="#" data-placeholder-link>Peking University</a></span>
+      </div>
+      <nav class="project-resources" aria-label="Project resources">
+        <a class="resource-link" href="#" data-placeholder-link>
+          <img class="resource-icon" src="assets/icons/arxiv.png" alt="" aria-hidden="true">
+          <span>Paper</span>
+        </a>
+        <a class="resource-link" href="#" data-placeholder-link>
+          <img class="resource-icon" src="assets/icons/github.png" alt="" aria-hidden="true">
+          <span>Code</span>
+        </a>
+        <a class="resource-link resource-link-wide" href="#" data-placeholder-link>
+          <img class="resource-icon" src="assets/icons/huggingface.png" alt="" aria-hidden="true">
+          <span>Model Card</span>
+        </a>
+        <a class="resource-link" href="#" data-placeholder-link>
+          <img class="resource-icon" src="assets/icons/demo.png" alt="" aria-hidden="true">
+          <span>Demo</span>
+        </a>
+        <a class="resource-link" href="#" data-placeholder-link>
+          <img class="resource-icon" src="assets/icons/youtube.jpg" alt="" aria-hidden="true">
+          <span>Video</span>
+        </a>
+
+      </nav>
+    </header>
+
+    <section class="hero-section" aria-label="Project showreel">
+      <div class="hero-media surface wide"><video autoplay muted loop playsinline preload="metadata" poster="assets/overview/poster.jpg" aria-label="WorldCore showreel"><source src="assets/overview/overview.mp4" type="video/mp4"></video></div>
+    </section>
+
+    <article class="article">
+      <aside class="section-toc" aria-label="Article navigation">
+        <nav aria-label="Table of contents">
+          <ul>
+            <li class="toc-group" data-toc-group="introduction"><div class="toc-item"><a href="#introduction" data-toc-target="introduction">Introduction</a></div></li>
+            <li class="toc-group" data-toc-group="consistency-validation"><div class="toc-item"><a href="#consistency-validation" data-toc-target="consistency-validation">Consistency Validation</a></div></li>
+            <li class="toc-group" data-toc-group="image-to-explorable-world"><div class="toc-item"><a href="#image-to-explorable-world" data-toc-target="image-to-explorable-world">Image to Explorable World</a></div></li>
+            <li class="toc-group" data-toc-group="text-to-explorable-world"><div class="toc-item"><a href="#text-to-explorable-world" data-toc-target="text-to-explorable-world">Text to Explorable World</a></div></li>
+            <li class="toc-group" data-toc-group="novel-view-synthesis"><div class="toc-item"><a href="#novel-view-synthesis" data-toc-target="novel-view-synthesis">Novel View Synthesis</a></div></li>
+            <li class="toc-group" data-toc-group="interactive-demo"><div class="toc-item"><a href="#interactive-demo" data-toc-target="interactive-demo">Interactive Demo</a></div></li>
+
+            <li class="toc-group" data-toc-group="citation"><div class="toc-item"><a href="#citation" data-toc-target="citation">Citation</a></div></li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="copy intro-copy">
+        <h2 id="introduction">Introduction</h2>
+        <p>Exploring a generated world should not mean losing it when you look away. Video world models create new observations as users move the camera, but maintaining a coherent world requires remembering scenes beyond the recent context and recovering their appearance and structure when revisited.</p>
+        <p><strong>WorldCrafter</strong> addresses this challenge with a camera-queryable, implicit 3D-aware memory. Its key idea is to let the requested viewpoint guide which historical information reaches the video generator. A jointly trained memory encoder and pose-conditioned readout turn complementary past views into a fixed set of target-view-specific memory tokens, without explicit depth estimation or geometric warping. This memory preserves historical scene information, while recent temporal context supports ongoing motion.</p>
+        <p>Starting from a single image or a text prompt, WorldCrafter supports camera-controlled, minute-scale exploration across static and dynamic scenes. Few-step distillation enables real-time streaming interaction. On a benchmark spanning 145 scenes and 725 camera trajectories, WorldCrafter improves long-horizon revisit consistency and camera-control accuracy over the evaluated baselines, while achieving the highest overall VBench score.</p>
+      </div>
+
+      <section class="article-section" id="consistency-validation" data-section-title="Consistency Validation">
+        <div class="sticky-label" aria-hidden="true"><span>Consistency Validation</span><span>⌄</span></div>
+        <div class="copy">
+          <h2>Consistency Validation</h2>
+          <p>We reconstruct point clouds and camera trajectories from WorldCrafter-generated videos that explore a scene and revisit previously observed viewpoints. Coherent scene geometry and aligned camera poses across revisits provide visual evidence of spatial consistency in the generated videos. The paired visualizations show these reconstructions alongside the generated views.</p>
+        </div>
+        <figure class="figure wide highlight-demo worldcore-gallery" data-worldcore-gallery="consistency" data-demo-param="validation-demo">
+          <div class="highlight-controls">
+            <div class="thumb-rail">
+              <div class="thumb-strip" aria-label="WorldCore example picker">
+                <button class="thumb active" type="button" data-demo="cat-vac-new" aria-label="Cat Vac New" aria-pressed="true"><img src="assets/consistency/cat-vacuum/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="case57" aria-label="Case 57 Architecture" aria-pressed="false"><img src="assets/consistency/classroom/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="helios-astronaut-093" title="Helios · Astronaut" aria-label="Helios Astronaut" aria-pressed="false"><img src="assets/consistency/astronaut/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="pavilion" aria-label="Pavilion" aria-pressed="false"><img src="assets/consistency/pavilion/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="case016" aria-label="Case 016" aria-pressed="false"><img src="assets/consistency/penguin/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="indoor-drift" aria-label="Indoor Drift" aria-pressed="false"><img src="assets/consistency/indoor-drift/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="hinsdale-street" aria-label="Hinsdale Street" aria-pressed="false"><img src="assets/consistency/hinsdale-street/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="cafe-sunset" aria-label="Cafe Sunset" aria-pressed="false"><img src="assets/consistency/cafe-sunset/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="ice-palace" aria-label="Ice Palace" aria-pressed="false"><img src="assets/consistency/ice-palace/poster.png" alt="" loading="lazy"></button>
+              </div>
+              <div class="thumb-scrollbar" aria-hidden="true"><i></i></div>
+            </div>
+            <div class="input-output">
+              <div class="output-pane">
+                <span>Generated video</span>
+                <div class="highlight-output"><video controls muted loop playsinline preload="none" data-src="assets/worldcore-demos/output-aligned/cat-vac-v7-actions.mp4" poster="assets/consistency/cat-vacuum/poster.png" aria-label="Cat Vac generated video" data-demo-output data-sync-video></video></div>
+              </div>
+              <div class="consistency-pane">
+                <span class="consistency-label">Point cloud reconstructed from the generated video</span>
+                <div class="reconstruction-panel">
+                  <video muted playsinline loop preload="none" hidden data-demo-reconstruction data-sync-video aria-label="Synchronized progressive reconstruction video"></video>
+                </div>
+              </div>
+            </div>
+            <p class="gallery-status" role="status" aria-live="polite" hidden></p>
+          </div>
+        </figure>
+      </section>
+
+      <section class="article-section" id="image-to-explorable-world" data-section-title="Image to Explorable World">
+        <div class="sticky-label" aria-hidden="true"><span>Image to Explorable World</span><span>⌄</span></div>
+        <div class="copy">
+          <h2>Image to Explorable World</h2>
+          <p>Turn a single image into an explorable world. WorldCrafter generates a continuous video in response to camera controls, revealing unseen regions, following moving subjects, and returning to familiar views.</p>
+          <p>Its implicit 3D-aware memory helps recover previously observed scene content, while recent temporal context supports ongoing motion. The examples below demonstrate exploration across static and dynamic environments, including subject continuity when an object leaves the field of view and later reappears.</p>
+        </div>
+<figure class="figure wide highlight-demo worldcore-gallery" data-worldcore-gallery="generation" data-demo-param="generation-demo">
+          <div class="highlight-controls">
+            <div class="thumb-rail">
+              <div class="thumb-strip" aria-label="WorldCore example picker">
+                <button class="thumb active" type="button" data-demo="helios-socrates" title="Helios · Socrates" aria-label="Helios Socrates" aria-pressed="true"><img src="assets/image-to-world/socrates/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="chestnut" aria-label="Chestnut" aria-pressed="false"><img src="assets/image-to-world/chestnut/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="ethereal-explorer" aria-label="Ethereal Explorer" aria-pressed="false"><img src="assets/image-to-world/ethereal-explorer/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="puppy-bath" aria-label="Puppy Bath" aria-pressed="false"><img src="assets/image-to-world/puppy-bath/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="alpine-soar" aria-label="Alpine Soar" aria-pressed="false"><img src="assets/image-to-world/alpine-soar/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="waterfall" aria-label="Waterfall" aria-pressed="false"><img src="assets/image-to-world/waterfall/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="serene-waters" aria-label="Serene Waters" aria-pressed="false"><img src="assets/image-to-world/serene-waters/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="crater-cruiser" aria-label="Crater Cruiser" aria-pressed="false"><img src="assets/image-to-world/crater-cruiser/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="helios-case061" title="Helios · Blue Parrot" aria-label="Helios Blue Parrot" aria-pressed="false"><img src="assets/image-to-world/blue-parrot/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="tram" aria-label="Tram" aria-pressed="false"><img src="assets/image-to-world/tram/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="case005" aria-label="Case 005" aria-pressed="false"><img src="assets/image-to-world/scene-a/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="burrow" aria-label="Burrow" aria-pressed="false"><img src="assets/image-to-world/burrow/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="case157" aria-label="Case 157" aria-pressed="false"><img src="assets/image-to-world/scene-b/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="helios-case104" title="Helios · Fairy" aria-label="Helios Fairy" aria-pressed="false"><img src="assets/image-to-world/fairy/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="case106" aria-label="Case 106" aria-pressed="false"><img src="assets/image-to-world/scene-c/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="forest-cabin" aria-label="Forest Cabin" aria-pressed="false"><img src="assets/image-to-world/forest-cabin/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="shine-and-seek" aria-label="Shine and Seek" aria-pressed="false"><img src="assets/image-to-world/shine-and-seek/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="case114" aria-label="Case 114" aria-pressed="false"><img src="assets/image-to-world/mermaid/poster.png" alt="" loading="lazy"></button>
+              </div>
+              <div class="thumb-scrollbar" aria-hidden="true"><i></i></div>
+            </div>
+            <div class="input-output">
+              <div class="output-pane">
+                <span>Generated video</span>
+                <div class="highlight-output"><video controls muted loop playsinline preload="none" data-src="assets/image-to-world/socrates/output.mp4" poster="assets/image-to-world/socrates/poster.png" aria-label="Helios Socrates generated video" data-demo-output data-sync-video></video></div>
+              </div>
+              <div class="consistency-pane" hidden>
+                <span class="consistency-label">Point cloud reconstructed from the generated video</span>
+                <div class="reconstruction-panel">
+                  <video muted playsinline loop preload="none" hidden data-demo-reconstruction data-sync-video aria-label="Synchronized progressive reconstruction video"></video>
+                </div>
+              </div>
+            </div>
+            <p class="gallery-status" role="status" aria-live="polite" hidden></p>
+          </div>
+        </figure>
+      </section>
+
+      <section class="article-section" id="text-to-explorable-world" data-section-title="Text to Explorable World">
+        <div class="sticky-label" aria-hidden="true"><span>Text to Explorable World</span><span>⌄</span></div>
+        <div class="copy">
+          <h2>Text to Explorable World</h2>
+          <p>A text description guides the content of the generated scene, while a camera trajectory controls how it is explored. WorldCore conditions successive video chunks on the text, recent observations, and a compact 3D-aware memory.</p>
+          <p>As generation continues, the memory is updated from past frames to help retain previously seen content. Text guides what the world looks like; camera control and memory support coherent exploration over time.</p>
+        </div>
+        <figure class="figure wide highlight-demo worldcore-gallery" data-worldcore-gallery="text-generation" data-demo-param="text-demo">
+          <div class="highlight-controls">
+            <div class="thumb-rail">
+              <div class="thumb-strip" aria-label="Text to video example picker">
+                <button class="thumb active" type="button" data-demo="t2v-mind131-00" aria-label="Mind131 Case 00" aria-pressed="true"><img src="assets/text-to-world/reef/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="t2v-thirdperson-02" aria-label="Third-person Case 02" aria-pressed="false"><img src="assets/text-to-world/balloon/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="t2v-zen-garden" aria-label="Zen Garden" aria-pressed="false"><img src="assets/text-to-world/zen-garden/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="t2v-ancient-athens" aria-label="Ancient Athens" aria-pressed="false"><img src="assets/text-to-world/ancient-athens/poster.png" alt="" loading="lazy"></button>
+                <button class="thumb" type="button" data-demo="t2v-volcanic-landscape" aria-label="Volcanic Landscape" aria-pressed="false"><img src="assets/text-to-world/volcano/poster.png" alt="" loading="lazy"></button>
+              </div>
+              <div class="thumb-scrollbar" aria-hidden="true"><i></i></div>
+            </div>
+            <div class="input-output">
+              <div class="output-pane">
+                <span>Generated video</span>
+                <div class="highlight-output"><video controls muted loop playsinline preload="none" data-src="assets/text-to-world/reef/output.mp4" poster="assets/text-to-world/reef/poster.png" aria-label="Mind131 Case 00 generated video" data-demo-output data-sync-video></video></div>
+              </div>
+              <div class="consistency-pane" hidden>
+                <span class="consistency-label">Point cloud reconstructed from the generated video</span>
+                <div class="reconstruction-panel"><video muted playsinline loop preload="none" hidden data-demo-reconstruction data-sync-video aria-label="Synchronized reconstruction"></video></div>
+              </div>
+            </div>
+            <p class="gallery-status" role="status" aria-live="polite" hidden></p>
+          </div>
+        </figure>
+      </section>
+
+      <section class="article-section" id="novel-view-synthesis" data-section-title="Novel View Synthesis">
+        <div class="sticky-label" aria-hidden="true"><span>Novel View Synthesis</span><span>⌄</span></div>
+        <div class="copy">
+          <h2>Novel View Synthesis</h2>
+          <p>Explore new viewpoints from one or more input images with WorldCrafter-fast. Select an example below. The courtyard includes a slider for comparing input-view settings, while the walking-person example uses four reference images.</p>
+        </div>
+        <figure class="figure wide nvs-demo" data-nvs id="nvs-courtyard" data-nvs-panel>
+          <div class="nvs-input"><span>Input</span><div class="nvs-input-stack">
+            <div class="nvs-input-view" data-nvs-input><img src="assets/nvs/courtyard/input-a.png" alt="Input view 1, used in all three results"></div>
+            <div class="nvs-input-view is-masked" data-nvs-input><img src="assets/nvs/courtyard/input-b.png" alt="Input view 2, used in the two-view and three-view results"></div>
+            <div class="nvs-input-view is-masked" data-nvs-input><img src="assets/nvs/courtyard/input-c.png" alt="Input view 3, used in the three-view result"></div>
+          </div></div>
+          <div class="nvs-output"><span>Generated video</span><div class="nvs-video-stack">
+            <video muted loop playsinline preload="none" poster="assets/nvs/courtyard/input-a.png" data-nvs-video data-sync-video data-src="assets/nvs/courtyard/orbit-a.mp4" aria-label="Single-view output"></video>
+            <video muted loop playsinline preload="none" data-nvs-video data-sync-video data-src="assets/nvs/courtyard/orbit-b.mp4" aria-label="Two-view output" aria-hidden="true" style="opacity:0"></video>
+            <video muted loop playsinline preload="none" data-nvs-video data-sync-video data-src="assets/nvs/courtyard/orbit-c.mp4" aria-label="Three-view output" aria-hidden="true" style="opacity:0"></video>
+          </div></div>
+          <figcaption class="nvs-selector"><label for="nvs-view-count" id="nvs-status">Novel views from a single input image</label><div class="nvs-slider-track"><input id="nvs-view-count" type="range" min="1" max="3" step="0.01" value="1" aria-label="Number of input images" aria-describedby="nvs-status"><div class="nvs-slider-dots" aria-hidden="true"><i></i><i></i><i></i></div></div><div class="nvs-ticks"><span>1 image</span><span>2 images</span><span>3 images</span></div></figcaption>
+        </figure>
+        <figure class="figure wide nvs-demo nvs-four-inputs" id="nvs-walking-person" data-nvs-panel hidden aria-label="Walking person novel-view synthesis">
+          <div class="nvs-input"><span>Input · 4 views</span><div class="nvs-input-stack">
+            <div class="nvs-input-view"><img src="assets/nvs/walking-person/input-a.png" alt="Walking person input image 1" loading="lazy"></div>
+            <div class="nvs-input-view"><img src="assets/nvs/walking-person/input-b.png" alt="Walking person input image 4" loading="lazy"></div>
+            <div class="nvs-input-view"><img src="assets/nvs/walking-person/input-c.png" alt="Walking person input image 7" loading="lazy"></div>
+            <div class="nvs-input-view"><img src="assets/nvs/walking-person/input-d.png" alt="Walking person input image 10" loading="lazy"></div>
+          </div></div>
+          <div class="nvs-output"><span>Generated video</span><div class="nvs-video-stack">
+            <video muted loop playsinline controls preload="none" data-src="assets/nvs/walking-person/output.mp4" aria-label="Generated orbit around a walking person"></video>
+          </div></div>
+        </figure>
+        <div class="nvs-overview" role="group" aria-label="Novel view synthesis examples">
+          <button class="nvs-case-thumb" type="button" data-nvs-case="nvs-courtyard" aria-controls="nvs-courtyard" aria-pressed="true" aria-label="Courtyard"><img src="assets/nvs/courtyard/input-a.png" alt="Courtyard"></button>
+          <button class="nvs-case-thumb" type="button" data-nvs-case="nvs-walking-person" aria-controls="nvs-walking-person" aria-pressed="false" aria-label="Walking person"><img src="assets/nvs/walking-person/input-a.png" alt="Walking person"></button>
+        </div>
+      </section>
+
+      <section class="article-section" id="interactive-demo" data-section-title="Interactive Demo">
+        <div class="sticky-label" aria-hidden="true"><span>Interactive Demo</span><span>⌄</span></div>
+        <div class="copy">
+          <h2>Interactive Demo</h2>
+          <p>A recorded demonstration of real-time interaction with WorldCrafter, showing how user controls guide exploration of a generated world. This is a screen recording, not a playable demo.</p>
+        </div>
+      </section>
+
+      <section class="article-section" id="citation" data-section-title="Citation">
+        <div class="sticky-label" aria-hidden="true"><span>Citation</span><span>⌄</span></div>
+        <div class="copy">
+          <h2>Citation</h2>
+          <p>Citation details will be added here.</p>
+
+        </div>
+      </section>
+
+    </article>
+
+  </main>
+</body>
+</html>
