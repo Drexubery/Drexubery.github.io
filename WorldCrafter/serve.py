@@ -1,4 +1,3 @@
-"""Local static preview with byte ranges for MP4 seeking. No dependencies."""
 import argparse
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
@@ -62,7 +61,7 @@ class VideoHandler(SimpleHTTPRequestHandler):
                 outputfile.write(block)
                 self.bytes_remaining -= len(block)
         except (BrokenPipeError, ConnectionResetError):
-            pass  # A scene switch cancels the previous video's request.
+            pass
 
     def log_message(self, fmt, *args):
         if len(args) > 1 and str(args[1]).startswith(('4', '5')):
@@ -70,7 +69,7 @@ class VideoHandler(SimpleHTTPRequestHandler):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(description='Local static preview with byte ranges for MP4 seeking.')
     parser.add_argument('--port', type=int, default=4173)
     args = parser.parse_args()
     handler = partial(VideoHandler, directory=str(Path(__file__).resolve().parent))

@@ -26,7 +26,6 @@
   font-display: swap;
 }
 
-/* SEVA page-header fonts, bundled locally for offline use. */
 @font-face {
   font-family: "Lato";
   src: url("assets/fonts/lato-regular.woff2") format("woff2");
@@ -347,7 +346,7 @@ main {
   width: min(780px, 100%);
   margin: 32px auto 0;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -380,6 +379,13 @@ main {
 .hero-media {
   margin-inline: auto;
   aspect-ratio: 16 / 9;
+}
+
+.hero-media iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .hero-media video,
@@ -516,8 +522,6 @@ main {
   line-height: 13px;
 }
 
-/* Only show the desktop contents rail when a 1072px showcase and a 32px gutter
-   both fit beside it. Narrower layouts keep the media centered and hide the rail. */
 @media (min-width: 1552px) {
   .section-toc {
     display: block;
@@ -963,14 +967,12 @@ figcaption {
   perspective: 600px;
 }
 
-/* These 640x384 demos must retain their complete edge watermarks. */
 .worldcore-gallery {
   --gallery-column-gap: 16px;
   --gallery-label-height: 20px;
   --gallery-label-gap: 8px;
 }
 
-/* Center the preview picker below the unchanged output panels. */
 .worldcore-gallery .highlight-controls {
   gap: 28px;
 }
@@ -1033,7 +1035,6 @@ figcaption {
 
 .worldcore-gallery .input-output {
   display: grid;
-  /* Output is 5:3 and reconstruction is square: matching media heights. */
   grid-template-columns: minmax(0, 5fr) minmax(0, 3fr);
   gap: var(--gallery-column-gap);
   align-items: start;
@@ -1057,13 +1058,11 @@ figcaption {
   gap: var(--gallery-label-gap);
 }
 
-/* Keep the original grid track so hiding validation never enlarges Output. */
 .worldcore-gallery .consistency-pane[hidden] { display: none; }
 
 @media (min-width: 561px) {
   .worldcore-gallery[data-worldcore-gallery="generation"] .input-output,
   .worldcore-gallery[data-worldcore-gallery="text-generation"] .input-output {
-    /* Preserve the former 5/8 track width, minus its share of the 16px gap. */
     grid-template-columns: minmax(0, calc(62.5% - 10px));
     justify-content: center;
   }
@@ -1781,7 +1780,7 @@ figcaption {
 .nvs-demo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: 20px 16px; }
 .nvs-demo[hidden] { display: none; }
 #novel-view-synthesis > .nvs-demo { margin-bottom: 24px; }
-.nvs-overview { display: flex; justify-content: center; width: min(100% - 32px, 450px); gap: 26px; margin: 24px auto 48px; }
+.nvs-overview { display: flex; justify-content: center; width: min(100% - 32px, 688px); gap: 26px; margin: 24px auto 48px; }
 .nvs-case-thumb { display: block; flex: 0 1 212px; min-width: 0; padding: 0; border: 0; border-radius: 13px; overflow: hidden; background: transparent; cursor: pointer; }
 .nvs-case-thumb img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
 .nvs-case-thumb:focus-visible { outline: 2px solid #2a679c; outline-offset: 4px; }
@@ -1797,6 +1796,8 @@ figcaption {
 .nvs-input-view::after { content: ''; position: absolute; inset: 0; background: rgba(249,249,251,.76); opacity: 0; transition: opacity 250ms; pointer-events: none; }
 .nvs-input-view.is-masked::after { opacity: 1; }
 .nvs-input-view.is-masked img { filter: grayscale(1); }
+.nvs-coffee-inputs { grid-template-columns: minmax(0, 4fr) minmax(0, 15fr); }
+.nvs-coffee-inputs .nvs-input-view { aspect-ratio: 4 / 3; }
 .nvs-video-stack { position: relative; width: 100%; aspect-ratio: 5 / 3; overflow: hidden; border-radius: 8px; background: #eeeef3; }
 .nvs-video-stack video { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; }
 .nvs-selector { grid-column: 1 / -1; width: min(416px, 90%); justify-self: center; text-align: center; margin-top: 4px; }

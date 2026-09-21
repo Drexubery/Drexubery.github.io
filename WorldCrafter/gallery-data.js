@@ -1,4 +1,3 @@
-// Media used by the visible example galleries.
 window.WORLDCRAFTER_DEMOS = {
   "cat-vac-new": {
     "id": "cat-vac-new",

@@ -10,7 +10,6 @@
   const strip = gallery.querySelector(".thumb-strip");
   const rail = gallery.querySelector(".thumb-rail");
   const buttons = [...strip.querySelectorAll("[data-demo]")];
-  // Keep visual and keyboard order together: output first, then the preview picker.
   gallery.querySelector(".input-output").after(rail);
   rail.style.setProperty("--preview-columns", ["generation", "text-generation"].includes(gallery.dataset.worldcoreGallery)
     ? 5 : Math.max(1, Math.ceil(buttons.length / 2)));

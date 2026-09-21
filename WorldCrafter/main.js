@@ -38,7 +38,6 @@
       const targetTop = target.getBoundingClientRect().top + window.scrollY;
       if (targetTop <= marker) active = target;
     });
-    // A short final section cannot reach the top marker at the end of the page.
     if (window.scrollY > 0 && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
       active = tocOrder[tocOrder.length - 1];
     }
@@ -121,7 +120,6 @@
     });
     new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; playback(); }, {threshold: .1}).observe(nvs);
     document.addEventListener('visibilitychange', playback);
-    // Compare the same camera position instead of restarting on selection.
     window.setInterval(() => {
       const master = videos[0];
       if (!visible || document.hidden || master.paused || !(master.duration > 0)) return;

@@ -44,19 +44,15 @@
           <img class="resource-icon" src="assets/icons/arxiv.png" alt="" aria-hidden="true">
           <span>Paper</span>
         </a>
-        <a class="resource-link" href="#" data-placeholder-link>
+        <a class="resource-link" href="https://github.com/TencentARC/WorldCrafter" target="_blank" rel="noopener noreferrer">
           <img class="resource-icon" src="assets/icons/github.png" alt="" aria-hidden="true">
           <span>Code</span>
         </a>
-        <a class="resource-link resource-link-wide" href="#" data-placeholder-link>
+        <a class="resource-link resource-link-wide" href="https://huggingface.co/TencentARC/WorldCrafter-Fast" target="_blank" rel="noopener noreferrer">
           <img class="resource-icon" src="assets/icons/huggingface.png" alt="" aria-hidden="true">
           <span>Model Card</span>
         </a>
-        <a class="resource-link" href="#" data-placeholder-link>
-          <img class="resource-icon" src="assets/icons/demo.png" alt="" aria-hidden="true">
-          <span>Demo</span>
-        </a>
-        <a class="resource-link" href="#" data-placeholder-link>
+        <a class="resource-link" href="https://youtu.be/sg09ftQOl0E" target="_blank" rel="noopener noreferrer">
           <img class="resource-icon" src="assets/icons/youtube.jpg" alt="" aria-hidden="true">
           <span>Video</span>
         </a>
@@ -65,7 +61,7 @@
     </header>
 
     <section class="hero-section" aria-label="Project showreel">
-      <div class="hero-media surface wide"><video autoplay muted loop playsinline preload="metadata" poster="assets/overview/poster.jpg" aria-label="WorldCore showreel"><source src="assets/overview/overview.mp4" type="video/mp4"></video></div>
+      <div class="hero-media surface wide"><iframe src="https://www.youtube.com/embed/sg09ftQOl0E?autoplay=1&amp;mute=0&amp;playsinline=1&amp;controls=1&amp;loop=1&amp;playlist=sg09ftQOl0E&amp;rel=0" title="WorldCrafter teaser" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
     </section>
 
     <article class="article">
@@ -77,7 +73,6 @@
             <li class="toc-group" data-toc-group="image-to-explorable-world"><div class="toc-item"><a href="#image-to-explorable-world" data-toc-target="image-to-explorable-world">Image to Explorable World</a></div></li>
             <li class="toc-group" data-toc-group="text-to-explorable-world"><div class="toc-item"><a href="#text-to-explorable-world" data-toc-target="text-to-explorable-world">Text to Explorable World</a></div></li>
             <li class="toc-group" data-toc-group="novel-view-synthesis"><div class="toc-item"><a href="#novel-view-synthesis" data-toc-target="novel-view-synthesis">Novel View Synthesis</a></div></li>
-            <li class="toc-group" data-toc-group="interactive-demo"><div class="toc-item"><a href="#interactive-demo" data-toc-target="interactive-demo">Interactive Demo</a></div></li>
 
             <li class="toc-group" data-toc-group="citation"><div class="toc-item"><a href="#citation" data-toc-target="citation">Citation</a></div></li>
           </ul>
@@ -216,7 +211,7 @@
         <div class="sticky-label" aria-hidden="true"><span>Novel View Synthesis</span><span>⌄</span></div>
         <div class="copy">
           <h2>Novel View Synthesis</h2>
-          <p>Explore new viewpoints from one or more input images with WorldCrafter-fast. Select an example below. The courtyard includes a slider for comparing input-view settings, while the walking-person example uses four reference images.</p>
+          <p>WorldCrafter also supports multi-view image inputs for novel view synthesis.</p>
         </div>
         <figure class="figure wide nvs-demo" data-nvs id="nvs-courtyard" data-nvs-panel>
           <div class="nvs-input"><span>Input</span><div class="nvs-input-stack">
@@ -232,7 +227,7 @@
           <figcaption class="nvs-selector"><label for="nvs-view-count" id="nvs-status">Novel views from a single input image</label><div class="nvs-slider-track"><input id="nvs-view-count" type="range" min="1" max="3" step="0.01" value="1" aria-label="Number of input images" aria-describedby="nvs-status"><div class="nvs-slider-dots" aria-hidden="true"><i></i><i></i><i></i></div></div><div class="nvs-ticks"><span>1 image</span><span>2 images</span><span>3 images</span></div></figcaption>
         </figure>
         <figure class="figure wide nvs-demo nvs-four-inputs" id="nvs-walking-person" data-nvs-panel hidden aria-label="Walking person novel-view synthesis">
-          <div class="nvs-input"><span>Input · 4 views</span><div class="nvs-input-stack">
+          <div class="nvs-input"><span>Input</span><div class="nvs-input-stack">
             <div class="nvs-input-view"><img src="assets/nvs/walking-person/input-a.png" alt="Walking person input image 1" loading="lazy"></div>
             <div class="nvs-input-view"><img src="assets/nvs/walking-person/input-b.png" alt="Walking person input image 4" loading="lazy"></div>
             <div class="nvs-input-view"><img src="assets/nvs/walking-person/input-c.png" alt="Walking person input image 7" loading="lazy"></div>
@@ -242,17 +237,20 @@
             <video muted loop playsinline controls preload="none" data-src="assets/nvs/walking-person/output.mp4" aria-label="Generated orbit around a walking person"></video>
           </div></div>
         </figure>
+        <figure class="figure wide nvs-demo nvs-coffee-inputs" id="nvs-coffee-martini" data-nvs-panel hidden aria-label="Coffee martini novel-view synthesis">
+          <div class="nvs-input"><span>Input</span><div class="nvs-input-stack">
+            <div class="nvs-input-view"><img src="assets/nvs/coffee-martini/input-a.jpg" alt="Coffee martini left reference image" loading="lazy"></div>
+            <div class="nvs-input-view"><img src="assets/nvs/coffee-martini/input-b.jpg" alt="Coffee martini middle reference image" loading="lazy"></div>
+            <div class="nvs-input-view"><img src="assets/nvs/coffee-martini/input-c.jpg" alt="Coffee martini right reference image" loading="lazy"></div>
+          </div></div>
+          <div class="nvs-output"><span>Generated video</span><div class="nvs-video-stack">
+            <video muted loop playsinline controls preload="none" poster="assets/nvs/coffee-martini/poster.jpg" data-src="assets/nvs/coffee-martini/output.mp4" aria-label="Generated viewpoint sequence of coffee martini preparation"></video>
+          </div></div>
+        </figure>
         <div class="nvs-overview" role="group" aria-label="Novel view synthesis examples">
           <button class="nvs-case-thumb" type="button" data-nvs-case="nvs-courtyard" aria-controls="nvs-courtyard" aria-pressed="true" aria-label="Courtyard"><img src="assets/nvs/courtyard/input-a.png" alt="Courtyard"></button>
           <button class="nvs-case-thumb" type="button" data-nvs-case="nvs-walking-person" aria-controls="nvs-walking-person" aria-pressed="false" aria-label="Walking person"><img src="assets/nvs/walking-person/input-a.png" alt="Walking person"></button>
-        </div>
-      </section>
-
-      <section class="article-section" id="interactive-demo" data-section-title="Interactive Demo">
-        <div class="sticky-label" aria-hidden="true"><span>Interactive Demo</span><span>⌄</span></div>
-        <div class="copy">
-          <h2>Interactive Demo</h2>
-          <p>A recorded demonstration of real-time interaction with WorldCrafter, showing how user controls guide exploration of a generated world. This is a screen recording, not a playable demo.</p>
+          <button class="nvs-case-thumb" type="button" data-nvs-case="nvs-coffee-martini" aria-controls="nvs-coffee-martini" aria-pressed="false" aria-label="Coffee martini"><img src="assets/nvs/coffee-martini/poster.jpg" alt="Coffee martini"></button>
         </div>
       </section>
 
