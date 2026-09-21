@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="240 65 330 675"><rect x="240" y="65" width="330" height="675" fill="#f7f5ef"/>
+ <g fill="none" stroke="#565550" stroke-width="16" stroke-linejoin="miter"><path d="M282 695V105H428V245H518V695Z"/></g>
+ <path d="M428 147V202 M329 695H486" stroke="#9b9386" stroke-width="12"/>
+ <path d="M282 245H304 M360 245H428" stroke="#565550" stroke-width="12"/>
+ <path d="M305 243H359 M307 248H361" stroke="#9b9386" stroke-width="2"/>
+ <rect x="414" y="245" width="39" height="172" rx="2" fill="#d6c5aa" stroke="#565550" stroke-width="2"/>
+ <g stroke="#9b9386" stroke-width="1"><path d="M414 274H453 M414 303H453 M414 332H453 M414 360H453 M414 389H453"/></g>
+ <g stroke="#565550" stroke-width="2"><path d="M455 259H510"/><path d="M455 273H510"/><path d="M455 287H510"/><path d="M455 301H510"/><path d="M455 315H510"/><path d="M455 329H510"/><path d="M455 343H510"/><path d="M455 357H510"/><path d="M455 371H510"/><path d="M455 385H510"/><path d="M455 399H510"/><path d="M455 413H510"/></g>
+ <path d="M453 417H459 M510 417H518" stroke="#565550" stroke-width="7"/>
+ <path d="M510 417V469" stroke="#9b9386" stroke-width="3"/><path d="M459 417A51 51 0 0 0 510 469" stroke="#9b9386" stroke-width="1" fill="none"/>
+ <g font-family="system-ui,sans-serif" fill="#504b43" text-anchor="middle"><text x="390" y="85" font-size="14">二层布局示意</text><text x="352" y="183" font-size="14">卫生间</text><text x="347" y="535" font-size="16">卧室</text><text x="430" y="337" font-size="10" transform="rotate(90 430 337)">衣柜分隔</text><text x="486" y="282" font-size="11">楼梯</text><text x="475" y="494" font-size="9">原平台并入室内</text><text x="394" y="726" font-size="9">按最新方案更新 · 非施工图</text></g></svg>
