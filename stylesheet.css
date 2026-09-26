@@ -223,6 +223,11 @@ h2 {
   padding: 24px 16px;
 }
 
+.work-visual video.worldcrafter-preview {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
 .work-visual img.gl-preview {
   object-fit: contain;
   background: #fff;
