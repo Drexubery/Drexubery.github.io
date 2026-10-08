@@ -31,15 +31,6 @@
   src: local("Lato Bold Italic"), local("Lato-BoldItalic"), url("https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2") format("woff2");
 }
 
-@font-face {
-  font-family: "Chinese Name Kaiti";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("fonts/chinese-name-kaiti.ttf") format("truetype");
-  unicode-range: U+4F59, U+65FA, U+535A;
-}
-
 :root {
   --text: #111;
   --muted: #4e4e4e;
@@ -108,8 +99,24 @@ h1 {
 }
 
 .chinese-name {
-  font-family: "Chinese Name Kaiti", "Kaiti SC", "STKaiti", "KaiTi", serif;
-  white-space: nowrap;
+  position: relative;
+  display: inline-block;
+  width: 3.4em;
+  height: 1.2em;
+  margin-left: 0.2em;
+  overflow: hidden;
+  vertical-align: -0.2em;
+}
+
+/* Frame the approved artwork without changing its lettering or source image. */
+.chinese-name img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6em;
+  max-width: none;
+  height: auto;
+  transform: translate(-50%, -50%);
 }
 
 .role {
