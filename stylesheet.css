@@ -171,6 +171,13 @@ h2 {
   flex-wrap: wrap;
   align-items: baseline;
   gap: 0 8px;
+  padding-bottom: 10px;
+}
+
+.contribution-note {
+  margin: 0 20px 20px;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .works-toggle {
