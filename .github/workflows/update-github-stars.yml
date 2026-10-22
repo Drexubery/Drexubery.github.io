@@ -1,0 +1,52 @@
+name: Update GitHub star badges
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: update-github-stars
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 1
+      - name: Test updater
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - name: Refresh all homepage star badges
+        id: refresh
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/update_github_stars.py
+      - name: Save successful updates
+        run: |
+          git add data/github-stars.json images/github-stars
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Update cached GitHub star counts'
+            git push origin HEAD:master
+          fi
+      # A GITHUB_TOKEN commit alone does not trigger a legacy Pages build.
+      # Request it explicitly, also retrying publication after any previous failure.
+      - name: Publish updated badges to GitHub Pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
+      - name: Report failed refreshes without replacing good badges
+        if: steps.refresh.outcome == 'failure'
+        run: |
+          echo 'Some counts could not be refreshed. Last successful badges were preserved.'
+          exit 1
