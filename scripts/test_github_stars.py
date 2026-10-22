@@ -1,6 +1,8 @@
 import json
+import io
 import tempfile
 import unittest
+from contextlib import redirect_stdout
 from pathlib import Path
 from xml.etree import ElementTree
 
@@ -39,7 +41,8 @@ class StarTests(unittest.TestCase):
                 if repo == 'a/fail':
                     raise RuntimeError('limited')
                 return 123
-            failed = refresh(root, fetch=fetch, sleep=lambda _: None)
+            with redirect_stdout(io.StringIO()):
+                failed = refresh(root, fetch=fetch, sleep=lambda _: None)
             self.assertEqual(failed, ['a/fail'])
             self.assertEqual(calls.count('a/fail'), 3)
             self.assertEqual(previous.read_bytes(), old_bytes)
