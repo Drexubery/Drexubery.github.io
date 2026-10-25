@@ -1,36 +1,36 @@
 {
   "repositories": {
     "TencentARC/WorldCrafter": {
-      "stars": 537,
-      "updated_at": "2026-10-25T04:40:41+00:00"
+      "stars": 538,
+      "updated_at": "2026-10-25T11:28:25+00:00"
     },
     "TencentARC/Multics": {
       "stars": 104,
-      "updated_at": "2026-10-25T04:40:41+00:00"
+      "updated_at": "2026-10-25T11:28:25+00:00"
     },
     "Drexubery/ViewCrafter": {
       "stars": 1608,
-      "updated_at": "2026-10-25T04:40:41+00:00"
+      "updated_at": "2026-10-25T11:28:25+00:00"
     },
     "TrajectoryCrafter/TrajectoryCrafter": {
       "stars": 887,
-      "updated_at": "2026-10-25T04:40:42+00:00"
+      "updated_at": "2026-10-25T11:28:26+00:00"
     },
     "Doubiiu/DynamiCrafter": {
       "stars": 3005,
-      "updated_at": "2026-10-25T04:40:42+00:00"
+      "updated_at": "2026-10-25T11:28:26+00:00"
     },
     "AILab-CVC/HiFi-123": {
       "stars": 67,
-      "updated_at": "2026-10-25T04:40:42+00:00"
+      "updated_at": "2026-10-25T11:28:26+00:00"
     },
     "PKU-YuanGroup/HoloTime": {
       "stars": 161,
-      "updated_at": "2026-10-25T04:40:43+00:00"
+      "updated_at": "2026-10-25T11:28:26+00:00"
     },
     "PKU-YuanGroup/UniWorld": {
-      "stars": 892,
-      "updated_at": "2026-10-25T04:40:43+00:00"
+      "stars": 893,
+      "updated_at": "2026-10-25T11:28:27+00:00"
     }
   }
 }
